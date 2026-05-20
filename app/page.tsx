@@ -1,0 +1,40 @@
+import SectionHero from '@/components/SectionHero';
+import SectionAbout from '@/components/SectionAbout';
+import SectionVideo from '@/components/SectionVideo';
+import SectionWho from '@/components/SectionWho';
+import SectionProgram from '@/components/SectionProgram';
+import SectionHowLearning from '@/components/SectionHowLearning';
+import SectionBonuses from '@/components/SectionBonuses';
+import SectionTalent from '@/components/SectionTalent';
+import SectionSpeakers from '@/components/SectionSpeakers';
+import SectionTariff from '@/components/SectionTariff';
+import SectionAcademy from '@/components/SectionAcademy';
+import SectionReviews from '@/components/SectionReviews';
+import SectionFaq from '@/components/SectionFaq';
+
+export default function Page() {
+  return (
+    <div className="page-wrapper">
+      <img
+        src="/images/67090a00bdc7f308273e71f2_%D0%A8%D0%A3%D0%9C.webp"
+        loading="lazy"
+        width={1920}
+        alt=""
+        className="noise"
+      />
+      <SectionHero />
+      <SectionAbout />
+      <SectionVideo />
+      <SectionWho />
+      <SectionProgram />
+      <SectionHowLearning />
+      <SectionBonuses />
+      <SectionTalent />
+      <SectionSpeakers />
+      <SectionTariff />
+      <SectionAcademy />
+      <SectionReviews />
+      <SectionFaq />
+    </div>
+  );
+}
