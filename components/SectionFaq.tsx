@@ -142,8 +142,7 @@ export default function SectionFaq() {
               </div>
               <nav style={{height: '0px'}} className="dropdown-list w-dropdown-list" id="w-dropdown-list-3" aria-labelledby="w-dropdown-toggle-3">
                 <div className="margin_30"></div>
-                <div className="helvetica_21 white mobile_15">Навчання розраховане до 7 днів активної практики. Можна
-                  проходити в своєму темпі, витрачаючи від 1 до 2 годин на день.</div>
+                <div className="helvetica_21 white mobile_15">Навчання розраховане на місяць активної практики. Можна проходити в своєму темпі, витрачаючи від 1 до 2 годин на день.</div>
                 <div className="margin_50"></div>
               </nav>
             </div>

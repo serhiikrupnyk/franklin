@@ -6,6 +6,7 @@ import './section-talent.css';
 import './section-tariff-v3.css';
 import './section-academy-v2.css';
 import './site-footer.css';
+import './mobile.css';
 
 export const metadata: Metadata = {
   title: 'FRANKLIN P2P EDUCATION — Опануй професію майбутнього',
