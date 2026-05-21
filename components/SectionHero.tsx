@@ -23,8 +23,10 @@ export default function SectionHero() {
               </div>
             </div>
             <img
-              src="/images/dolar.png"
-              loading="lazy"
+              src="/images/dolar.webp"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
               alt=""
               className="hero-v2__dolar"
             />

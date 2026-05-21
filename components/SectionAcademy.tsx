@@ -30,7 +30,7 @@ export default function SectionAcademy() {
               1500
             </div>
             <img
-              src="/images/WITHOUTBACK.png"
+              src="/images/WITHOUTBACK.webp"
               loading="lazy"
               alt=""
               className="academy-v2__hero"
@@ -42,7 +42,7 @@ export default function SectionAcademy() {
                 <span className="academy-v2__brand-p2p">P2P</span>
               </span>
               <br />
-              <span className="academy-v2__title-brand">
+              <span className="academy-v2__title-brand academy-v2__title-brand--education">
                 <span className="academy-v2__brand-franklin">EDUCATION</span>
                 <span className="academy-v2__brand-dash"> —</span>
               </span>
@@ -75,27 +75,33 @@ export default function SectionAcademy() {
                 <div className="academy-v2__stat-value">95%</div>
                 <div className="academy-v2__stat-text">
                   <span className="academy-v2__check" aria-hidden="true" />
-                  повністю <span className="academy-v2__stat-accent">завершили</span> усі модулі
+                  <span className="academy-v2__stat-copy">
+                    повністю <span className="academy-v2__stat-accent">завершили</span> усі модулі
+                  </span>
                 </div>
               </div>
               <div className="academy-v2__stat">
                 <div className="academy-v2__stat-value">89%</div>
                 <div className="academy-v2__stat-text">
                   <span className="academy-v2__check" aria-hidden="true" />
-                  <span className="academy-v2__stat-accent">зробили</span> перший круг ще під час навчання
+                  <span className="academy-v2__stat-copy">
+                    <span className="academy-v2__stat-accent">зробили</span> перший круг ще під час навчання
+                  </span>
                 </div>
               </div>
               <div className="academy-v2__stat">
                 <div className="academy-v2__stat-value">78%</div>
                 <div className="academy-v2__stat-text">
                   <span className="academy-v2__check" aria-hidden="true" />
-                  <span className="academy-v2__stat-accent">вже вийшли</span> на стабільний профіт у P2P
+                  <span className="academy-v2__stat-copy">
+                    <span className="academy-v2__stat-accent">вже вийшли</span> на стабільний профіт у P2P
+                  </span>
                 </div>
               </div>
             </div>
 
             <p className="academy-v2__desc">
-              <span className="academy-v2__desc-accent">Мета —</span> знайти найвмотивованіших студентів, допомогти їм зробити перші результати в P2P,
+              <span className="academy-v2__desc-accent">Мета — знайти найвмотивованіших студентів,</span> допомогти їм зробити перші результати в P2P,
               а далі — запропонувати співпрацю, партнерство або місце в нашій команді.
             </p>
 

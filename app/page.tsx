@@ -11,6 +11,7 @@ import SectionTariff from '@/components/SectionTariff';
 import SectionAcademy from '@/components/SectionAcademy';
 import SectionReviews from '@/components/SectionReviews';
 import SectionFaq from '@/components/SectionFaq';
+import Footer from '@/components/Footer';
 
 export default function Page() {
   return (
@@ -18,8 +19,11 @@ export default function Page() {
       <img
         src="/images/67090a00bdc7f308273e71f2_%D0%A8%D0%A3%D0%9C.webp"
         loading="lazy"
-        width={1920}
+        decoding="async"
+        width={1280}
+        height={794}
         alt=""
+        aria-hidden="true"
         className="noise"
       />
       <SectionHero />
@@ -35,6 +39,7 @@ export default function Page() {
       <SectionAcademy />
       <SectionReviews />
       <SectionFaq />
+      <Footer />
     </div>
   );
 }

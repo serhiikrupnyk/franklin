@@ -36,8 +36,9 @@ export default function SectionReviews() {
           <div className="reviews-bg">
             <div className="reviews-stroke">
               <div className="title-review-wrapper">
-                <div className="unbounded_70">
-                  <span className="blue">Відгуки</span> учнів
+                <div className="unbounded_70 reviews-title">
+                  <span className="reviews-title__accent">Відгуки</span>{' '}
+                  <span className="reviews-title__dark">учнів</span>
                 </div>
               </div>
 

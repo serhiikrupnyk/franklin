@@ -6,11 +6,15 @@ const nextConfig = {
   typescript: { ignoreBuildErrors: true },
   eslint: { ignoreDuringBuilds: true },
   images: {
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 60 * 60 * 24 * 30,
     remotePatterns: [
       { protocol: 'https', hostname: 'i.ytimg.com' },
       { protocol: 'https', hostname: 'secure.wayforpay.com' },
     ],
   },
+  compress: true,
+  poweredByHeader: false,
 };
 
 export default nextConfig;
