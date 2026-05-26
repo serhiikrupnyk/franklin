@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link
           rel="preload"
           as="image"
-          href="/images/man2.webp"
+          href="/images/man-transparent.webp"
           type="image/webp"
           fetchPriority="high"
         />

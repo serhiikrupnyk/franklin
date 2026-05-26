@@ -1,8 +1,33 @@
 export default function SectionHero() {
   return (
     <section className="section-hero hero-v2">
+      <svg style={{ display: "none" }} aria-hidden="true">
+        <defs>
+          <filter id="horizontal-glitch-desktop">
+            <feTurbulence type="fractalNoise" baseFrequency="0.1 0.30" numOctaves="1" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="25" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+          <filter id="horizontal-glitch-mobile">
+            <feTurbulence type="fractalNoise" baseFrequency="0.1 0.50" numOctaves="1" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="15" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+        </defs>
+      </svg>
       <div className="hero-v2__bg" aria-hidden="true" />
       <div className="hero-darkness" />
+      <div className="hero-v2__brand-bg" aria-hidden="true">
+        <span className="hero-v2__brand-line">FRANKLIN</span>
+        <span className="hero-v2__brand-line hero-v2__brand-line--p2p">P2P</span>
+        <span className="hero-v2__brand-line">EDUCATION</span>
+      </div>
+      <img
+        src="/images/man-transparent.webp"
+        loading="eager"
+        fetchPriority="high"
+        decoding="async"
+        alt=""
+        className="hero-v2__man"
+      />
       <div className="container">
         <div className="hero-v2__inner">
           <div className="hero-v2__main">

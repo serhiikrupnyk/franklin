@@ -7,134 +7,98 @@
    HERO (section-hero / .hero-v2)
    ============================================================ */
 @media (max-width: 767px) {
-  /* Switch to portrait photo on mobile (transparent PNG over gradient) */
+  /* Plain gradient bg — man is now an <img>, brand text is HTML */
   .hero-v2__bg {
-    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(/images/man-transparent.png), linear-gradient(to bottom, #555, #000);
-    background-position: center top, center top, 0 0;
-    background-size: contain, contain, 100% 100%;
-    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-image: linear-gradient(to bottom, #4a4a4a 0%, #222 100%);
+    background-size: 100% 100%;
+    background-position: 0 0;
   }
 
-  /* Hero now shows the photo at the TOP at a controlled size,
-     content sits below it (not on top of it). */
+  /* Show man on the RIGHT, bigger, fades out at bottom */
+  .hero-v2__man {
+    display: block;
+    left: auto;
+    right: -3vw;
+    bottom: 0;
+    height: 95%;
+    max-width: 65vw;
+    object-position: right bottom;
+    -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+  }
+
+  /* Show brand text — left-aligned, right padding reserves space for man */
+  .hero-v2__brand-bg {
+    display: flex;
+    padding: 6vw 54vw 2vw 4vw;
+    font-size: 12vw;
+    line-height: 0.88;
+  }
+
+  .hero-v2__brand-line--p2p {
+    margin-left: 4vw;
+  }
+
+  .hero-v2__brand-line {
+    filter: url(#horizontal-glitch-mobile);
+  }
+
   .hero-v2 {
     min-height: auto;
   }
 
+  /* Main content sits below the brand text area */
   .hero-v2__inner {
-    padding-top: 60vw;          /* photo height ≈ 60% of viewport width */
+    padding-top: 52vw;
     padding-bottom: 28px;
   }
 
   .hero-v2__main {
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
   }
 
   .hero-v2__copy {
     padding: 0 18px;
-    max-width: 100%;
-    text-align: center;
+    max-width: 65%;
+    text-align: left;
   }
 
   .hero-v2__title {
-    font-size: clamp(22px, 6vw, 32px);
-    line-height: 1.15;
-    text-align: center;
-    color: #c9a84c;
-    -webkit-text-fill-color: #c9a84c;
+    font-size: clamp(18px, 5.5vw, 28px);
+    line-height: 1.2;
+    text-align: left;
   }
 
-  .hero-v2__accent {
-    background: none;
-    -webkit-background-clip: unset;
-    background-clip: unset;
-    -webkit-text-fill-color: #f0c040;
-    color: #f0c040;
-  }
-
-  /* hide dolar image on mobile */
   .hero-v2__dolar {
     display: none;
   }
 
-
-  /* CTA buttons stack and become full-width */
   .hero-v2__buttons {
     flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    margin-top: 20px;
-    width: 100%;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 16px;
   }
 
   .hero-v2__buttons .button-black {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 16px 22px;
-    font-size: 13px;
-    border-radius: 999px;
-    background: #0d0d0d;
-    border: 1.5px solid #c9a84c;
-    color: #c9a84c;
-    -webkit-text-fill-color: #c9a84c;
-    box-shadow: none;
-    animation: none;
+    font-size: 12px;
+    padding: 10px 20px;
   }
 
   .hero-v2__buttons .button-black::after {
     display: none;
   }
 
-  .hero-v2__buttons .stroke-line-button {
-    width: 100%;
-    text-align: center;
-    padding: 10px 16px;
-    font-size: 13px;
-    display: block;
-    color: #c9a84c;
-    -webkit-text-fill-color: #c9a84c;
-    border-color: #c9a84c;
-  }
-
-  .hero-v2__buttons .stroke-line-button .opacity-60 {
-    opacity: 1;
-    color: #c9a84c;
-    -webkit-text-fill-color: #c9a84c;
-  }
-
-  .hero-v2__main {
-    align-items: center;
-  }
-
-  /* "Почни / Опануй / Прокрути" points */
+  /* Hide cards block on mobile */
   .hero-v2__cards.hero-content-down {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    padding: 0 18px;
-    margin-top: 24px;
-    width: 100%;
-  }
-
-  .hero-v2__cards.hero-content-down .hero-points-wrapper {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .hero-v2__cards.hero-content-down .hero-point-wrapper-icon {
     display: none;
-  }
-
-  .hero-v2__cards.hero-content-down .hero-point-text-wrapper {
-    text-align: center;
-    width: 100%;
   }
 }
 
 @media (max-width: 479px) {
   .hero-v2__inner {
-    padding-top: 68vw;
+    padding-top: 56vw;
   }
 
   .hero-v2__title {
