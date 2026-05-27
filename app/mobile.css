@@ -23,8 +23,13 @@
     height: 95%;
     max-width: 65vw;
     object-position: right bottom;
-    -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+    filter: brightness(0.8);
+    -webkit-mask-image: linear-gradient(to left, black 55%, transparent 92%),
+                        linear-gradient(to bottom, transparent 0%, black 8%, black 85%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to left, black 55%, transparent 92%),
+                linear-gradient(to bottom, transparent 0%, black 8%, black 85%, transparent 100%);
+    mask-composite: intersect;
   }
 
   /* Show brand text — left-aligned, right padding reserves space for man */
