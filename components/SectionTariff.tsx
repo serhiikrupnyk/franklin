@@ -28,7 +28,7 @@ const PLANS: TariffPlan[] = [
       'Розуміння усіх базових аспектів у P2P, старт заробітку з доходом від 500$ на місяць. Можливість відбити вартість курсу вже під час навчання.',
     oldPrice: '490$',
     price: '290$',
-    ctaHref: '#form',
+    ctaHref: 'https://secure.wayforpay.com/button/b0f657e92040d',
     ctaLabel: 'ОБРАТИ ТАРИФ',
   },
   {
@@ -58,7 +58,7 @@ const PLANS: TariffPlan[] = [
       "Глибоке розуміння ринку, дохід від 1000$+ на місяць, реальна можливість потрапити до команди FranklinP2P. Можливо окупити вартість навчання ще під час проходження курсу.",
     oldPrice: '700$',
     price: '450$',
-    ctaHref: '#form',
+    ctaHref: 'https://secure.wayforpay.com/button/b6575f6df9966',
     ctaLabel: 'ОБРАТИ ТАРИФ',
   },
   {
@@ -81,7 +81,7 @@ const PLANS: TariffPlan[] = [
       'Розуміння, як масштабуватись до стабільного доходу 1500–2000$+ щомісяця. Можливість увійти до команди FranklinP2P або побудувати власну.',
     oldPrice: '1200$',
     price: '790$',
-    ctaHref: '#form',
+    ctaHref: 'https://secure.wayforpay.com/button/bd2998359eb9d',
     ctaLabel: 'ОБРАТИ ТАРИФ',
   },
 ] as const;
@@ -116,7 +116,7 @@ function TariffCard({ plan }: { plan: TariffPlan }) {
           <div className="tariff-v3__old">{plan.oldPrice}</div>
           <div className="tariff-v3__price">{plan.price}</div>
         </div>
-        <a href={plan.ctaHref} className={`tariff-v3__cta tariff-v3__cta--${plan.code}`}>
+        <a href={plan.ctaHref} target="_blank" rel="noopener noreferrer" className={`tariff-v3__cta tariff-v3__cta--${plan.code}`}>
           {plan.ctaLabel}
         </a>
       </div>

@@ -1,5 +1,5 @@
 'use client';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect, useCallback } from 'react';
 
 const REVIEWS = [
   { id: 'QsANXKlRJnc', name: 'Відгук 1' },
@@ -13,121 +13,130 @@ const REVIEWS = [
 export default function SectionReviews() {
   const trackRef = useRef<HTMLDivElement>(null);
   const [openId, setOpenId] = useState<string | null>(null);
+  const [active, setActive] = useState(0);
 
-  const scrollByOne = (dir: 1 | -1) => {
+  const goTo = useCallback((idx: number) => {
     const track = trackRef.current;
     if (!track) return;
-    const card = track.querySelector<HTMLElement>('[data-slide]');
-    const step = card ? card.offsetWidth + 24 : track.clientWidth * 0.8;
-    track.scrollBy({ left: dir * step, behavior: 'smooth' });
+    const card = track.querySelectorAll<HTMLElement>('[data-slide]')[idx];
+    if (!card) return;
+    track.scrollTo({ left: card.offsetLeft - track.offsetLeft, behavior: 'smooth' });
+    setActive(idx);
+  }, []);
+
+  const scrollByOne = (dir: 1 | -1) => {
+    const next = Math.max(0, Math.min(REVIEWS.length - 1, active + dir));
+    goTo(next);
   };
 
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+    const onScroll = () => {
+      const cards = track.querySelectorAll<HTMLElement>('[data-slide]');
+      let closest = 0;
+      let minDist = Infinity;
+      cards.forEach((card, i) => {
+        const dist = Math.abs(card.offsetLeft - track.scrollLeft - track.offsetLeft);
+        if (dist < minDist) { minDist = dist; closest = i; }
+      });
+      setActive(closest);
+    };
+    track.addEventListener('scroll', onScroll, { passive: true });
+    return () => track.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
-    <section className="section-reviews reviews-fixed">
+    <section className="rv2-section">
       <div className="container">
-        <div className="reviews-wrapper">
-          <img
-            src="/images/670450fa70492be453611bfd_oskolok%20rev%20%281%29.webp"
-            loading="lazy"
-            width={428}
-            alt=""
-            className="review-decor-img"
-          />
-          <div className="reviews-bg">
-            <div className="reviews-stroke">
-              <div className="title-review-wrapper">
-                <div className="unbounded_70 reviews-title">
-                  <span className="reviews-title__accent">Відгуки</span>{' '}
-                  <span className="reviews-title__dark">учнів</span>
-                </div>
-              </div>
 
-              <div className="reviews-slider">
-                <button
-                  type="button"
-                  className="reviews-arrow reviews-arrow--left"
-                  aria-label="Попередній"
-                  onClick={() => scrollByOne(-1)}
-                >
-                  <img
-                    src="/images/6704300efa640eb93a461c22_Arrow%203-1.svg"
-                    alt=""
-                    className="review-arrow"
-                  />
-                </button>
-
-                <div className="reviews-track" ref={trackRef}>
-                  {REVIEWS.map((r) => (
-                    <button
-                      key={r.id}
-                      type="button"
-                      data-slide
-                      className="reviews-card"
-                      onClick={() => setOpenId(r.id)}
-                      aria-label={`Дивитися ${r.name}`}
-                    >
-                      <img
-                        src={`https://i.ytimg.com/vi/${r.id}/hqdefault.jpg`}
-                        loading="lazy"
-                        alt={r.name}
-                        className="review-img"
-                      />
-                      <div className="darkness-review" />
-                      <div className="play-button-wrapper">
-                        <div className="play">
-                          <img
-                            src="/images/6704461f1babd73573b2315c_Play.svg"
-                            loading="lazy"
-                            alt="Play"
-                            className="play-icon"
-                          />
-                        </div>
-                        <div className="underline-button">
-                          <div className="helvetica_15 helvetica-bold">ПЕРЕГЛЯНУТИ</div>
-                        </div>
-                      </div>
-                    </button>
-                  ))}
-                </div>
-
-                <button
-                  type="button"
-                  className="reviews-arrow reviews-arrow--right"
-                  aria-label="Наступний"
-                  onClick={() => scrollByOne(1)}
-                >
-                  <img
-                    src="/images/6704300efa0b6d2336f243e7_Arrow%202-1.svg"
-                    alt=""
-                    className="review-arrow"
-                  />
-                </button>
-              </div>
-            </div>
-          </div>
+        <div className="rv2-header">
+          <span className="rv2-label">Результати учнів</span>
+          <h2 className="rv2-title">
+            <span className="rv2-title__accent">Відгуки</span> учнів
+          </h2>
+          <p className="rv2-desc">Реальні відео від тих, хто вже пройшов навчання</p>
         </div>
+
+        <div className="rv2-slider">
+          <button
+            type="button"
+            className="rv2-arrow rv2-arrow--left"
+            aria-label="Попередній"
+            onClick={() => scrollByOne(-1)}
+            disabled={active === 0}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
+
+          <div className="rv2-track" ref={trackRef}>
+            {REVIEWS.map((r) => (
+              <button
+                key={r.id}
+                type="button"
+                data-slide
+                className="rv2-card"
+                onClick={() => setOpenId(r.id)}
+                aria-label={`Дивитися ${r.name}`}
+              >
+                <img
+                  src={`https://i.ytimg.com/vi/${r.id}/hqdefault.jpg`}
+                  loading="lazy"
+                  alt={r.name}
+                  className="rv2-card__img"
+                />
+                <div className="rv2-card__overlay" />
+                <div className="rv2-card__play">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                </div>
+                <span className="rv2-card__label">ПЕРЕГЛЯНУТИ</span>
+              </button>
+            ))}
+          </div>
+
+          <button
+            type="button"
+            className="rv2-arrow rv2-arrow--right"
+            aria-label="Наступний"
+            onClick={() => scrollByOne(1)}
+            disabled={active === REVIEWS.length - 1}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+        </div>
+
+        <div className="rv2-dots">
+          {REVIEWS.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              className={`rv2-dot${i === active ? ' rv2-dot--active' : ''}`}
+              onClick={() => goTo(i)}
+              aria-label={`Слайд ${i + 1}`}
+            />
+          ))}
+        </div>
+
       </div>
 
       {openId && (
-        <div
-          className="reviews-modal"
-          onClick={() => setOpenId(null)}
-          role="dialog"
-          aria-modal="true"
-        >
-          <button
-            type="button"
-            className="reviews-modal__close"
-            aria-label="Закрити"
-            onClick={() => setOpenId(null)}
-          >
-            ×
+        <div className="rv2-modal" onClick={() => setOpenId(null)} role="dialog" aria-modal="true">
+          <button type="button" className="rv2-modal__close" onClick={() => setOpenId(null)} aria-label="Закрити">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+              <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
           </button>
-          <div className="reviews-modal__frame" onClick={(e) => e.stopPropagation()}>
+          <div className="rv2-modal__frame" onClick={(e) => e.stopPropagation()}>
             <iframe
               src={`https://www.youtube.com/embed/${openId}?autoplay=1`}
-              title="YouTube video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              title="YouTube відгук"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
           </div>

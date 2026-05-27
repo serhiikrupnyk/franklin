@@ -2,7 +2,7 @@ export default function SectionHowLearning() {
   return (
     <section id="education" className="how-learning">
       <img
-        src="/images/%D0%94%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD%20%D0%B1%D0%B5%D0%B7%203232332233323323%201.png"
+        src="/images/IMG_6712.webp"
         loading="lazy"
         alt=""
         className="how-learning__bg"

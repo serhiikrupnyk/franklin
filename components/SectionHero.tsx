@@ -9,7 +9,7 @@ export default function SectionHero() {
           </filter>
           <filter id="horizontal-glitch-mobile">
             <feTurbulence type="fractalNoise" baseFrequency="0.1 0.50" numOctaves="1" result="noise" />
-            <feDisplacementMap in="SourceGraphic" in2="noise" scale="15" xChannelSelector="R" yChannelSelector="G" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="7" xChannelSelector="R" yChannelSelector="G" />
           </filter>
         </defs>
       </svg>
@@ -21,7 +21,7 @@ export default function SectionHero() {
         <span className="hero-v2__brand-line">EDUCATION</span>
       </div>
       <img
-        src="/images/man-transparent.webp"
+        src="/images/man-color-transparent.webp"
         loading="eager"
         fetchPriority="high"
         decoding="async"
@@ -32,19 +32,34 @@ export default function SectionHero() {
         <div className="hero-v2__inner">
           <div className="hero-v2__main">
             <div className="hero-v2__copy">
-              <h1 className="hero-v2__title helvetica_60 helvetica_light">
-                Опануй професію майбутнього
-                <br />
-                <span className="hero-v2__accent">за 30 днів</span> та почни заробляти{" "}
-                <span className="hero-v2__accent">від $800</span>
-              </h1>
+              <p className="hero-v2__subtitle">
+                Практичне навчання P2P-торгівлі з реальними зв&apos;язками та підтримкою
+              </p>
+              <div className="hero-v2__badges">
+                <span className="hero-v2__badge">1500+ учнів</span>
+                <span className="hero-v2__badge hero-v2__badge--accent">4 роки в P2P</span>
+                <span className="hero-v2__badge">Telegram-комʼюніті</span>
+                <span className="hero-v2__badge">Навчання через Telegram</span>
+                <span className="hero-v2__badge">ФОП + офіційна оплата</span>
+              </div>
               <div className="hero-buttons-wrapper hero-v2__buttons">
-                <a href="#tariffs" className="button-black w-button">
+                <a href="https://t.me/P2P_Mentoor" target="_blank" rel="noopener noreferrer" className="button-black w-button">
                   <strong>Записатися на курс</strong>
                 </a>
                 <a href="#program" className="stroke-line-button btn-margin-33 w-inline-block">
                   <div className="opacity-60">Подивитись всю програму</div>
                 </a>
+              </div>
+              <div className="hero-v2__contacts">
+                <span className="hero-v2__contacts-label">👨🏻‍💻 Зв&apos;язок зі мною:</span>
+                <div className="hero-v2__contacts-links">
+                  <a href="https://t.me/traffic_merch" target="_blank" rel="noopener noreferrer" className="hero-v2__contact-link">
+                    @traffic_merch
+                  </a>
+                  <a href="https://t.me/P2P_Mentoor" target="_blank" rel="noopener noreferrer" className="hero-v2__contact-link">
+                    @P2P_Mentoor
+                  </a>
+                </div>
               </div>
             </div>
             <img

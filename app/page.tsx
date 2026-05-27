@@ -1,5 +1,6 @@
 import SectionHero from '@/components/SectionHero';
 import SectionAbout from '@/components/SectionAbout';
+import SectionCalc from '@/components/SectionCalc';
 import SectionVideo from '@/components/SectionVideo';
 import SectionWho from '@/components/SectionWho';
 import SectionProgram from '@/components/SectionProgram';
@@ -28,6 +29,7 @@ export default function Page() {
       />
       <SectionHero />
       <SectionAbout />
+      <SectionCalc />
       <SectionVideo />
       <SectionWho />
       <SectionProgram />

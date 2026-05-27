@@ -19,7 +19,7 @@
     display: block;
     left: auto;
     right: -3vw;
-    bottom: 0;
+    bottom: 10%;
     height: 95%;
     max-width: 65vw;
     object-position: right bottom;
@@ -30,8 +30,8 @@
   /* Show brand text — left-aligned, right padding reserves space for man */
   .hero-v2__brand-bg {
     display: flex;
-    padding: 6vw 54vw 2vw 4vw;
-    font-size: 12vw;
+    padding: 18vw 54vw 2vw 4vw;
+    font-size: 7vw;
     line-height: 0.88;
   }
 
@@ -49,7 +49,7 @@
 
   /* Main content sits below the brand text area */
   .hero-v2__inner {
-    padding-top: 52vw;
+    padding-top: 60vw;
     padding-bottom: 28px;
   }
 
@@ -60,14 +60,31 @@
 
   .hero-v2__copy {
     padding: 0 18px;
-    max-width: 65%;
+    max-width: 100%;
+    width: 100%;
     text-align: left;
   }
 
   .hero-v2__title {
-    font-size: clamp(18px, 5.5vw, 28px);
+    font-size: clamp(18px, 5.5vw, 26px);
     line-height: 1.2;
     text-align: left;
+  }
+
+  .hero-v2__subtitle {
+    font-size: clamp(11px, 3.2vw, 15px);
+    margin-top: 8px;
+    max-width: 55%;
+  }
+
+  .hero-v2__badges {
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  .hero-v2__badge {
+    font-size: clamp(9px, 2.6vw, 12px);
+    padding: 4px 10px;
   }
 
   .hero-v2__dolar {
@@ -90,6 +107,27 @@
     display: none;
   }
 
+  .hero-v2__buttons .stroke-line-button.btn-margin-33 {
+    margin-top: -6px;
+  }
+
+  .hero-v2__contacts {
+    margin-top: 12px;
+    gap: 6px;
+  }
+
+  .hero-v2__contacts-label {
+    font-size: 12px;
+  }
+
+  .hero-v2__contact-link {
+    font-size: 12px;
+  }
+
+  .hero-v2__contacts-links {
+    gap: 8px;
+  }
+
   /* Hide cards block on mobile */
   .hero-v2__cards.hero-content-down {
     display: none;
@@ -98,11 +136,12 @@
 
 @media (max-width: 479px) {
   .hero-v2__inner {
-    padding-top: 56vw;
+    padding-top: 40vw;
   }
 
   .hero-v2__title {
-    font-size: clamp(20px, 6.4vw, 28px);
+    font-size: clamp(20px, 4.4vw, 28px);
+    padding-top: 54px;
   }
 }
 

@@ -147,8 +147,7 @@ export default function SectionFaq() {
               </nav>
             </div>
           </div>
-          <div className="btn-faq-wrapper-mob"><a href="#tariffs" className="button-black w-button "><strong>Записатися на
-                курс</strong></a></div>
+          <div className="btn-faq-wrapper-mob"><a href="https://t.me/P2P_Mentoor" target="_blank" rel="noopener noreferrer" className="button-black w-button "><strong>Записатися на курс</strong></a></div>
         </div>
       </div>
     </div>
