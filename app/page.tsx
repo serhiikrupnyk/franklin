@@ -10,6 +10,7 @@ import SectionTalent from '@/components/SectionTalent';
 import SectionSpeakers from '@/components/SectionSpeakers';
 import SectionTariff from '@/components/SectionTariff';
 import SectionAcademy from '@/components/SectionAcademy';
+import SectionMyResults from '@/components/SectionMyResults';
 import SectionReviews from '@/components/SectionReviews';
 import SectionFaq from '@/components/SectionFaq';
 import Footer from '@/components/Footer';
@@ -39,6 +40,7 @@ export default function Page() {
       <SectionSpeakers />
       <SectionTariff />
       <SectionAcademy />
+      <SectionMyResults />
       <SectionReviews />
       <SectionFaq />
       <Footer />

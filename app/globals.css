@@ -14403,6 +14403,68 @@ body {
   border-radius: 4px;
 }
 
+/* To-reviews button */
+.rv2-to-reviews {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.rv2-to-reviews__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border: 1px solid rgba(241, 211, 2, 0.45);
+  border-radius: 40px;
+  background: rgba(241, 211, 2, 0.06);
+  color: #f1d302;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.22s, border-color 0.22s, color 0.22s;
+}
+
+.rv2-to-reviews__btn:hover {
+  background: rgba(241, 211, 2, 0.14);
+  border-color: rgba(241, 211, 2, 0.75);
+  color: #fff;
+}
+
+.rv2-to-reviews__btn svg {
+  transition: transform 0.22s;
+}
+
+.rv2-to-reviews__btn:hover svg {
+  transform: translateX(3px);
+}
+
+/* Placeholder card */
+.rv2-card--placeholder {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px dashed rgba(241, 211, 2, 0.25);
+}
+
+.rv2-card__placeholder-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  z-index: 1;
+}
+
+.rv2-card__placeholder-text {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
 /* Modal */
 .rv2-modal {
   position: fixed;

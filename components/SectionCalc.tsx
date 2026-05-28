@@ -15,7 +15,7 @@ export default function SectionCalc() {
   }, [budget, percent, cycles, days]);
 
   const budgetPct  = ((budget  - 100)  / (10000 - 100))  * 100;
-  const percentPct = ((percent - 0.1)  / (3     - 0.1))  * 100;
+  const percentPct = ((percent - 0.1)  / (10    - 0.1))  * 100;
   const cyclesPct  = ((cycles  - 1)    / (100   - 1))    * 100;
   const daysPct    = ((days    - 1)    / (90    - 1))    * 100;
 
@@ -72,11 +72,11 @@ export default function SectionCalc() {
               </div>
               <div className="calc-row__slider-wrap">
                 <input className="calc-slider" type="range"
-                  min={0.1} max={3} step={0.1} value={percent}
+                  min={0.1} max={10} step={0.1} value={percent}
                   style={{ "--pct": `${percentPct}%` } as React.CSSProperties}
                   onChange={(e) => setPercent(Number(e.target.value))}
                 />
-                <div className="calc-row__limits"><span>0.1%</span><span>3%</span></div>
+                <div className="calc-row__limits"><span>0.1%</span><span>10%</span></div>
               </div>
               <div className="calc-row__value">{percent.toFixed(1)}%</div>
             </div>
