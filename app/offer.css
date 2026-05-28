@@ -1,0 +1,340 @@
+/* ── Offer Page ── */
+
+.offer-page {
+  position: relative;
+  min-height: 100vh;
+  background: #0d0d0d;
+  color: #e8e8e8;
+  font-family: 'Manrope', sans-serif;
+}
+
+.offer-page__bg {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 10%, rgba(212,175,55,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(212,175,55,0.05) 0%, transparent 55%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.offer-page__container {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+/* ── Back link ── */
+.offer-page__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(212,175,55,0.8);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 40px;
+  transition: color 0.2s;
+}
+
+.offer-page__back:hover {
+  color: #d4af37;
+}
+
+/* ── Header ── */
+.offer-page__header {
+  margin-bottom: 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(212,175,55,0.2);
+}
+
+.offer-page__label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #d4af37;
+  background: rgba(212,175,55,0.1);
+  border: 1px solid rgba(212,175,55,0.25);
+  border-radius: 4px;
+  padding: 4px 12px;
+  margin-bottom: 20px;
+}
+
+.offer-page__title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(22px, 4vw, 38px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin: 0 0 20px;
+  letter-spacing: -0.01em;
+}
+
+.offer-page__intro {
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.7);
+  margin: 0;
+}
+
+.offer-page__intro strong {
+  color: rgba(255,255,255,0.92);
+  font-weight: 600;
+}
+
+/* ── Body ── */
+.offer-page__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Section ── */
+.offer-section {
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.offer-section:last-child {
+  border-bottom: none;
+}
+
+.offer-section__title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 20px;
+  letter-spacing: 0.01em;
+}
+
+.offer-section__num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  border-radius: 50%;
+  background: rgba(212,175,55,0.12);
+  border: 1px solid rgba(212,175,55,0.35);
+  color: #d4af37;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.offer-section p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.72);
+  margin: 0;
+}
+
+/* ── List ── */
+.offer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.offer-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.72);
+}
+
+.offer-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d4af37;
+  opacity: 0.7;
+}
+
+/* ── Rights blocks ── */
+.offer-rights {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.offer-rights__block {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 20px 24px;
+}
+
+.offer-rights__subtitle {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #d4af37;
+  margin-bottom: 14px;
+}
+
+/* ── Contacts ── */
+.offer-contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.offer-contacts__card {
+  background: rgba(212,175,55,0.05);
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.offer-contacts__card-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #d4af37;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(212,175,55,0.15);
+}
+
+.offer-contacts__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 8px;
+}
+
+.offer-contacts__row:last-child {
+  margin-bottom: 0;
+}
+
+.offer-contacts__label {
+  color: rgba(255,255,255,0.45);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  min-width: 80px;
+  padding-top: 1px;
+}
+
+.offer-contacts__mono {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.85);
+  word-break: break-all;
+}
+
+/* ── Link ── */
+.offer-link {
+  color: #d4af37;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(212,175,55,0.35);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.offer-link:hover {
+  color: #f0cc55;
+  border-color: rgba(212,175,55,0.7);
+}
+
+/* ── Page footer ── */
+.offer-page__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(212,175,55,0.15);
+}
+
+.offer-page__back--bottom {
+  margin-bottom: 0;
+}
+
+.offer-page__copy {
+  font-size: 13px;
+  color: rgba(255,255,255,0.35);
+}
+
+/* ── Mobile ── */
+@media (max-width: 767px) {
+  .offer-page__container {
+    padding: 32px 16px 48px;
+  }
+
+  .offer-page__header {
+    margin-bottom: 32px;
+    padding-bottom: 28px;
+  }
+
+  .offer-contacts {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-contacts__card {
+    padding: 18px;
+  }
+
+  .offer-rights__block {
+    padding: 16px 18px;
+  }
+
+  .offer-section {
+    padding: 24px 0;
+  }
+
+  .offer-page__footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 479px) {
+  .offer-page__title {
+    font-size: 22px;
+  }
+
+  .offer-section__title {
+    font-size: 15px;
+    gap: 10px;
+  }
+
+  .offer-section__num {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    font-size: 13px;
+  }
+
+  .offer-contacts__label {
+    min-width: unset;
+    width: 100%;
+  }
+}

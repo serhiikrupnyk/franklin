@@ -126,7 +126,7 @@ export default function SectionCalc() {
           <div className="calc-result">
             <div className="calc-result__row">
               <span className="calc-result__label">Потенційний прибуток:</span>
-              <span className="calc-result__amount">~ ${profit.toLocaleString("en")}</span>
+              <span className="calc-result__amount">${profit.toLocaleString("en")}</span>
             </div>
             <div className="calc-result__divider" />
             <div className="calc-result__row calc-result__row--secondary">
