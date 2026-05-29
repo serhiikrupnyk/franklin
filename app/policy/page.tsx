@@ -120,11 +120,11 @@ export default function PolicyPage() {
                 </div>
                 <div className="offer-contacts__row">
                   <span className="offer-contacts__label">IBAN:</span>
-                  <span className="offer-contacts__mono">UA513005280000026003000049833</span>
+                  <span className="offer-contacts__mono">UA05325365000002600501207278 5</span>
                 </div>
                 <div className="offer-contacts__row">
                   <span className="offer-contacts__label">Банк:</span>
-                  <span>АТ «ОТП БАНК», МФО: 300528</span>
+                  <span>АТ «КРЕДОБАНК», МФО: 325365</span>
                 </div>
               </div>
             </div>
