@@ -38,8 +38,7 @@ export default function SectionHero() {
               <div className="hero-v2__badges">
                 <span className="hero-v2__badge">1500+ учнів</span>
                 <span className="hero-v2__badge hero-v2__badge--accent">4 роки в P2P</span>
-                <span className="hero-v2__badge">Telegram-комʼюніті</span>
-                <span className="hero-v2__badge">Навчання через Telegram</span>
+                <span className="hero-v2__badge-newline" aria-hidden="true" />
                 <span className="hero-v2__badge">ФОП + офіційна оплата</span>
               </div>
               <div className="hero-buttons-wrapper hero-v2__buttons">

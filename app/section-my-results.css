@@ -1,0 +1,243 @@
+/* ── My Results — themed story cards ── */
+
+.mr-track {
+  align-items: stretch;
+}
+
+.mr-card {
+  flex: 0 0 auto;
+  width: 360px;
+  max-width: 86vw;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: border-color 0.25s, transform 0.25s;
+}
+
+.mr-card:hover {
+  border-color: rgba(241, 211, 2, 0.4);
+}
+
+/* ── Head ── */
+.mr-card__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 22px 22px 18px;
+}
+
+.mr-card__num {
+  flex: 0 0 auto;
+  font-family: Unbounded, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0c0c0c;
+  background: #f1d302;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mr-card__head-text {
+  min-width: 0;
+}
+
+.mr-card__title {
+  font-family: Montserrat, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #fff;
+  margin: 0 0 6px;
+}
+
+.mr-card__desc {
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+}
+
+/* ── Media grid ── */
+.mr-card__media {
+  flex: 1;
+  display: grid;
+  gap: 4px;
+  padding: 0 14px 14px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+}
+
+.mr-card--media-1 .mr-card__media,
+.mr-card--media-2 .mr-card__media {
+  grid-template-columns: 1fr;
+}
+
+/* 3 items: third spans full width */
+.mr-card--media-3 .mr-thumb:nth-child(3) {
+  grid-column: span 2;
+}
+
+.mr-thumb {
+  position: relative;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.3);
+  aspect-ratio: 1 / 1;
+}
+
+.mr-card--media-1 .mr-thumb {
+  aspect-ratio: 3 / 4;
+}
+
+.mr-card--media-2 .mr-thumb {
+  aspect-ratio: 4 / 3;
+}
+
+.mr-thumb__media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.mr-thumb:hover .mr-thumb__media {
+  transform: scale(1.05);
+}
+
+.mr-thumb__play {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(12, 12, 12, 0.6);
+  color: #f1d302;
+  border-radius: 50%;
+  backdrop-filter: blur(2px);
+  pointer-events: none;
+}
+
+.mr-thumb__more {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(12, 12, 12, 0.68);
+  color: #fff;
+  font-family: Unbounded, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  backdrop-filter: blur(2px);
+  pointer-events: none;
+}
+
+/* ── Modal extras (browse within group) ── */
+.mr-modal__frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mr-modal__img {
+  max-width: 100%;
+  max-height: 84vh;
+  border-radius: 10px;
+  display: block;
+  object-fit: contain;
+}
+
+.mr-modal__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  backdrop-filter: blur(4px);
+}
+
+.mr-modal__nav:hover {
+  background: rgba(241, 211, 2, 0.18);
+  border-color: rgba(241, 211, 2, 0.6);
+}
+
+.mr-modal__nav--prev { left: 16px; }
+.mr-modal__nav--next { right: 16px; }
+
+.mr-modal__counter {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  padding: 6px 16px;
+  border-radius: 30px;
+  background: rgba(12, 12, 12, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* ── Mobile ── */
+@media (max-width: 767px) {
+  .mr-card {
+    width: 300px;
+    max-width: 82vw;
+    border-radius: 16px;
+  }
+
+  .mr-card__head {
+    padding: 18px 18px 14px;
+    gap: 12px;
+  }
+
+  .mr-card__num {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .mr-card__title {
+    font-size: 15px;
+  }
+
+  .mr-card__desc {
+    font-size: 12px;
+  }
+
+  .mr-modal__nav {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mr-modal__nav--prev { left: 8px; }
+  .mr-modal__nav--next { right: 8px; }
+}

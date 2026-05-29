@@ -7,6 +7,7 @@ import './section-tariff-v3.css';
 import './section-academy-v2.css';
 import './site-footer.css';
 import './section-calc.css';
+import './section-my-results.css';
 import './offer.css';
 import './mobile.css';
 
