@@ -42,7 +42,7 @@ export default function SectionHero() {
                 <span className="hero-v2__badge">ФОП + офіційна оплата</span>
               </div>
               <div className="hero-buttons-wrapper hero-v2__buttons">
-                <a href="https://t.me/P2P_Mentoor" target="_blank" rel="noopener noreferrer" className="button-black w-button">
+                <a href="#tariff" className="button-black w-button">
                   <strong>Записатися на курс</strong>
                 </a>
                 <a href="#program" className="stroke-line-button btn-margin-33 w-inline-block">
