@@ -82,7 +82,7 @@ export default function SectionFaq() {
                 <div className="dropdown-up">
                   <div style={{backgroundColor: 'rgb(54, 54, 54)'}} className="faq_icon_container"><img src="/images/670186946ac70f4e8a6991b0__.svg" loading="lazy" alt="" className="faq_icon" /></div>
                   <div className="faq_text_arrow">
-                    <div className="helvetica_med_25 white">Я повний навачок. Раніше не стикався з криптою. Мені підійде?
+                    <div className="helvetica_med_25 white">Я повний новачок. Раніше не стикався з криптою. Мені підійде?
                     </div>
                     <div style={{transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(180deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}} className="faq-arrow">
                       <div className="faq-line_left"></div>

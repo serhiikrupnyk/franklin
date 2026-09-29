@@ -11,15 +11,15 @@
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(160deg, rgba(var(--ivory-rgb), 0.06) 0%, rgba(var(--ivory-rgb), 0.02) 100%);
+  border: 1px solid rgba(var(--ivory-rgb), 0.1);
   border-radius: 20px;
   overflow: hidden;
   transition: border-color 0.25s, transform 0.25s;
 }
 
 .mr-card:hover {
-  border-color: rgba(241, 211, 2, 0.4);
+  border-color: rgba(var(--gold-rgb), 0.4);
 }
 
 /* ── Head ── */
@@ -36,7 +36,7 @@
   font-size: 16px;
   font-weight: 700;
   color: #0c0c0c;
-  background: #f1d302;
+  background: var(--gold);
   border-radius: 10px;
   width: 40px;
   height: 40px;
@@ -54,14 +54,14 @@
   font-size: 17px;
   font-weight: 700;
   line-height: 1.25;
-  color: #fff;
+  color: var(--ivory);
   margin: 0 0 6px;
 }
 
 .mr-card__desc {
   font-size: 13px;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(var(--ivory-rgb), 0.55);
   margin: 0;
 }
 
@@ -127,7 +127,7 @@
   align-items: center;
   justify-content: center;
   background: rgba(12, 12, 12, 0.6);
-  color: #f1d302;
+  color: var(--gold);
   border-radius: 50%;
   backdrop-filter: blur(2px);
   pointer-events: none;
@@ -140,7 +140,7 @@
   align-items: center;
   justify-content: center;
   background: rgba(12, 12, 12, 0.68);
-  color: #fff;
+  color: var(--ivory);
   font-family: Unbounded, sans-serif;
   font-size: 22px;
   font-weight: 700;
@@ -173,18 +173,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(var(--ivory-rgb), 0.25);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
+  background: rgba(var(--ivory-rgb), 0.08);
+  color: var(--ivory);
   cursor: pointer;
   transition: background 0.2s, border-color 0.2s;
   backdrop-filter: blur(4px);
 }
 
 .mr-modal__nav:hover {
-  background: rgba(241, 211, 2, 0.18);
-  border-color: rgba(241, 211, 2, 0.6);
+  background: rgba(var(--gold-rgb), 0.18);
+  border-color: rgba(var(--gold-rgb), 0.6);
 }
 
 .mr-modal__nav--prev { left: 16px; }
@@ -199,8 +199,8 @@
   padding: 6px 16px;
   border-radius: 30px;
   background: rgba(12, 12, 12, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #fff;
+  border: 1px solid rgba(var(--ivory-rgb), 0.15);
+  color: var(--ivory);
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.04em;

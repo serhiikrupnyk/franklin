@@ -38,26 +38,12 @@ export default function SectionAcademy() {
 
             <h2 className="academy-v2__title">
               <span className="academy-v2__title-brand">
-                <span className="academy-v2__brand-franklin">FRANKLIN</span>{' '}
-                <span className="academy-v2__brand-p2p">P2P</span>
+                <span className="academy-v2__brand-franklin">REMARENKO</span>{' '}
+                <span className="academy-v2__brand-p2p">P2P EDUCATION</span>
               </span>
-              <br />
-              <span className="academy-v2__title-brand academy-v2__title-brand--education">
-                <span className="academy-v2__brand-franklin">EDUCATION</span>
-                <span className="academy-v2__brand-dash"> —</span>
+              <span className="academy-v2__title-main">
+                ПОВНОЦІННЕ НАВЧАННЯ P2P ВІД ДІЮЧИХ ПРАКТИКІВ
               </span>
-              <br />
-              ПОВНОЦІННЕ
-              <br />
-              НАВЧАННЯ
-              <br />
-              ПО P2P
-              <br />
-              ТОРГІВЛІ
-              <br />
-              ВІД ДІЮЧИХ
-              <br />
-              ПРАКТИКІВ
             </h2>
           </div>
 
@@ -72,7 +58,15 @@ export default function SectionAcademy() {
 
             <div className="academy-v2__stats">
               <div className="academy-v2__stat">
-                <div className="academy-v2__stat-value">95%</div>
+                <div className="academy-v2__stat-head">
+                  <div className="academy-v2__stat-value">95%</div>
+                  <span className="academy-v2__stat-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <circle cx="12" cy="12" r="8.5" />
+                      <path d="m8.5 12 2.2 2.2 4.8-5" />
+                    </svg>
+                  </span>
+                </div>
                 <div className="academy-v2__stat-text">
                   <span className="academy-v2__check" aria-hidden="true" />
                   <span className="academy-v2__stat-copy">
@@ -81,7 +75,16 @@ export default function SectionAcademy() {
                 </div>
               </div>
               <div className="academy-v2__stat">
-                <div className="academy-v2__stat-value">89%</div>
+                <div className="academy-v2__stat-head">
+                  <div className="academy-v2__stat-value">89%</div>
+                  <span className="academy-v2__stat-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path d="M5 18V9M12 18V5M19 18v-7" />
+                      <path d="m4 14 5-4 3 2 7-6" />
+                      <path d="M16 6h3v3" />
+                    </svg>
+                  </span>
+                </div>
                 <div className="academy-v2__stat-text">
                   <span className="academy-v2__check" aria-hidden="true" />
                   <span className="academy-v2__stat-copy">
@@ -90,7 +93,16 @@ export default function SectionAcademy() {
                 </div>
               </div>
               <div className="academy-v2__stat">
-                <div className="academy-v2__stat-value">78%</div>
+                <div className="academy-v2__stat-head">
+                  <div className="academy-v2__stat-value">78%</div>
+                  <span className="academy-v2__stat-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path d="M4 19.5h16" />
+                      <path d="m5 16 4-4 3 2.5L19 7" />
+                      <path d="M16 7h3v3" />
+                    </svg>
+                  </span>
+                </div>
                 <div className="academy-v2__stat-text">
                   <span className="academy-v2__check" aria-hidden="true" />
                   <span className="academy-v2__stat-copy">

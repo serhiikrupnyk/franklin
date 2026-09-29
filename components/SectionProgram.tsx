@@ -2,9 +2,6 @@
 
 import { useState } from "react";
 
-const PAPER_EDGE =
-  "/images/670073b329bbfc1ebb2cb8ac_%D0%91%D1%83%D0%BC%D0%B0%D0%B3%D0%B0%20%D0%B2%D0%B5%D1%80%D1%85.jpg?v=2";
-
 const PROGRAM_ICONS = [
   "/images/670075a64d1e04c6941a14ce_Group%201321316711.svg",
   "/images/670075a6bc892130619740ce_Group%201321316711-1.svg",
@@ -24,7 +21,7 @@ const MODULES_BEFORE_PRO: ProgramModule[] = [
     label: "Модуль 0",
     title: "Введення в курс",
     items: [
-      "Привітання та знайомство з Franklin P2P",
+      "Привітання та знайомство з REMARENKO P2P",
       "Як проходить навчання: формат, структура, правила",
       "Що таке P2P і як саме тут заробляють",
       "З чого почати: реєстрація, картки, банкінг, чати",
@@ -252,34 +249,6 @@ export default function SectionProgram() {
 
   return (
     <section id="program" className="section_program program-v2">
-      <svg
-        viewBox="0 0 1440 120"
-        preserveAspectRatio="none"
-        className="program-v2__paper program-v2__paper--top"
-        style={{ height: "8.5vw", minHeight: "65px" }}
-      >
-        <defs>
-          <filter id="torn-white-top">
-            <feTurbulence type="fractalNoise" baseFrequency="0.015 0.04" numOctaves="4" seed="10" result="noise" />
-            <feDisplacementMap in="SourceGraphic" in2="noise" scale="22" xChannelSelector="R" yChannelSelector="G" />
-          </filter>
-          <filter id="torn-grey-top">
-            <feTurbulence type="fractalNoise" baseFrequency="0.015 0.04" numOctaves="4" seed="20" result="noise" />
-            <feDisplacementMap in="SourceGraphic" in2="noise" scale="20" xChannelSelector="R" yChannelSelector="G" />
-          </filter>
-        </defs>
-        <path
-          d="M -50 75 L 1490 75 L 1490 150 L -50 150 Z"
-          fill="#ffffff"
-          filter="url(#torn-white-top)"
-          opacity="0.95"
-        />
-        <path
-          d="M -50 80 L 1490 80 L 1490 150 L -50 150 Z"
-          fill="#ebebeb"
-          filter="url(#torn-grey-top)"
-        />
-      </svg>
       <div className="program-v2__surface">
         <div className="container">
           <div className="program">
@@ -327,34 +296,6 @@ export default function SectionProgram() {
           </div>
         </div>
       </div>
-      <svg
-        viewBox="0 0 1440 120"
-        preserveAspectRatio="none"
-        className="program-v2__paper program-v2__paper--bottom"
-        style={{ height: "8.5vw", minHeight: "65px" }}
-      >
-        <defs>
-          <filter id="torn-white-bottom">
-            <feTurbulence type="fractalNoise" baseFrequency="0.015 0.04" numOctaves="4" seed="30" result="noise" />
-            <feDisplacementMap in="SourceGraphic" in2="noise" scale="22" xChannelSelector="R" yChannelSelector="G" />
-          </filter>
-          <filter id="torn-grey-bottom">
-            <feTurbulence type="fractalNoise" baseFrequency="0.015 0.04" numOctaves="4" seed="40" result="noise" />
-            <feDisplacementMap in="SourceGraphic" in2="noise" scale="20" xChannelSelector="R" yChannelSelector="G" />
-          </filter>
-        </defs>
-        <path
-          d="M -50 75 L 1490 75 L 1490 150 L -50 150 Z"
-          fill="#ffffff"
-          filter="url(#torn-white-bottom)"
-          opacity="0.95"
-        />
-        <path
-          d="M -50 80 L 1490 80 L 1490 150 L -50 150 Z"
-          fill="#ebebeb"
-          filter="url(#torn-grey-bottom)"
-        />
-      </svg>
     </section>
   );
 }

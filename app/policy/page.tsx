@@ -3,7 +3,7 @@ import Link from 'next/link';
 import '../offer.css';
 
 export const metadata: Metadata = {
-  title: 'Політика конфіденційності — Franklin P2P Education',
+  title: 'Політика конфіденційності — REMARENKO P2P Education',
   description: 'Політика конфіденційності ФОП Ремаренка Михайла Петровича щодо обробки персональних даних.',
 };
 
@@ -70,7 +70,7 @@ export default function PolicyPage() {
               <li>
                 Ця Політика конфіденційності розміщена на вебсайті:{' '}
                 <a href="https://mini-franklinp2p.com" target="_blank" rel="noopener noreferrer" className="offer-link">
-                  mini-franklinp2p.com
+                  REMARENKO P2P EDUCATION
                 </a>
               </li>
               <li>
@@ -139,7 +139,7 @@ export default function PolicyPage() {
             </svg>
             Повернутися на головну
           </Link>
-          <span className="offer-page__copy">© {new Date().getFullYear()} Franklin P2P Education</span>
+          <span className="offer-page__copy">© {new Date().getFullYear()} REMARENKO P2P Education</span>
         </footer>
       </div>
     </div>

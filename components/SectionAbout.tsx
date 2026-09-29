@@ -13,7 +13,7 @@ export default function SectionAbout() {
           <div className="about-content-up">
             <div className="about-title-wrapper">
               <h2 className="unbounded_60 about-v2__title">
-                <span className="about-v2__gradient">FRANKLIN P2P EDUCATION – НАВЧИСЯ</span>{" "}
+                <span className="about-v2__gradient">REMARENKO P2P EDUCATION – НАВЧИСЯ</span>{" "}
                 ЗАРОБЛЯТИ НА P2P ТОРГІВЛІ ВІД 800$ ВСЬОГО ЗА МІСЯЦЬ
               </h2>
             </div>

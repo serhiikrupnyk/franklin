@@ -61,7 +61,7 @@
 }
 
 .talanta-section__title-gradient {
-  background: linear-gradient(90deg, #ffe06a 0%, #ff9f4b 55%, #ff5b56 100%);
+  background: linear-gradient(90deg, var(--gold-light) 0%, var(--gold) 55%, var(--gold-deep) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -72,11 +72,11 @@
   font-family: Manrope, sans-serif;
   font-size: clamp(13px, 1vw, 16px);
   line-height: 1.45;
-  color: rgba(255, 255, 255, 0.84);
+  color: rgba(var(--ivory-rgb), 0.84);
 }
 
 .talanta-section__intro strong {
-  color: #ffffff;
+  color: var(--ivory);
   font-weight: 800;
 }
 
@@ -113,7 +113,7 @@
 }
 
 .talanta-section__percent--gold {
-  background: linear-gradient(90deg, #e2b50a 0%, #ff9f22 44%, #ff503f 100%);
+  background: linear-gradient(90deg, var(--gold-light) 0%, var(--gold) 44%, var(--gold-deep) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -133,7 +133,7 @@
 }
 
 .talanta-section__percent--white {
-  color: #f5f5f5;
+  color: var(--ivory);
   z-index: 3;
   margin-top: -0.11em;
   opacity: 0.98;
@@ -168,7 +168,7 @@
 
 .talanta-section__factor {
   padding-bottom: clamp(18px, 1.8vw, 24px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid rgba(var(--ivory-rgb), 0.14);
 }
 
 .talanta-section__factor:last-child {
@@ -192,7 +192,7 @@
   font-family: Manrope, sans-serif;
   font-size: clamp(13px, 1vw, 16px);
   line-height: 1.45;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(var(--ivory-rgb), 0.7);
 }
 
 .talanta-section__dot {
@@ -201,8 +201,8 @@
   height: 6px;
   margin-top: 8px;
   border-radius: 50%;
-  background: linear-gradient(90deg, #ffe06a 0%, #ff8f43 100%);
-  box-shadow: 0 0 0 4px rgba(255, 160, 66, 0.12);
+  background: linear-gradient(90deg, var(--gold-light) 0%, var(--gold) 100%);
+  box-shadow: 0 0 0 4px rgba(var(--gold-rgb), 0.12);
 }
 
 .talanta-results {
@@ -211,7 +211,7 @@
   margin-right: auto;
   border-radius: 28px;
   background: rgba(248, 248, 248, 0.97);
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(var(--ivory-rgb), 0.9);
   padding: clamp(18px, 2vw, 28px);
   box-shadow: 0 22px 42px rgba(0, 0, 0, 0.26);
 }
@@ -226,7 +226,7 @@
 }
 
 .talanta-results__header-accent {
-  color: #ff4d4d;
+  color: var(--gold-deep);
 }
 
 .talanta-results__grid {
@@ -270,7 +270,7 @@
 }
 
 .talanta-results__check {
-  color: #ff4d4d;
+  color: var(--gold-deep);
   margin-right: 8px;
   font-weight: 800;
 }
@@ -278,7 +278,7 @@
 .talanta-results__cta-card {
   border-radius: 20px;
   background: #080808;
-  color: #fff;
+  color: var(--ivory);
   padding: 18px 16px;
   display: flex;
   flex-direction: column;
@@ -292,7 +292,7 @@
   font-family: Manrope, sans-serif;
   font-size: 14px;
   line-height: 1.25;
-  color: rgba(255, 255, 255, 0.86);
+  color: rgba(var(--ivory-rgb), 0.86);
   margin-bottom: 10px;
 }
 

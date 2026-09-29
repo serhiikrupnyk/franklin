@@ -1,18 +1,18 @@
 const BONUS_CARDS = [
   {
-    image: '/images/bonus-community.webp',
+    image: '/images/IMG_7421.PNG',
     title: "КОМ'ЮНІТІ",
     text: 'доступ до ком\'юніті на 6 місяців',
     alt: "Ком'юніті",
   },
   {
-    image: '/images/bonus-resources.webp',
+    image: '/images/IMG_7423.PNG',
     title: 'РЕСУРСИ',
     text: 'пакет корисних ресурсів (таблиці для розрахунку, текста, додаткові матеріали)',
     alt: 'Ресурси',
   },
   {
-    image: '/images/bonus-team.webp',
+    image: '/images/IMG_7422.PNG',
     title: 'КОМАНДА',
     text: 'можливість потрапити до нас в команду',
     alt: 'Команда',
@@ -40,10 +40,9 @@ export default function SectionBonuses() {
             <article key={card.title} className="bonuses-card">
               <div className="bonuses-card__media">
                 <img src={card.image} loading="lazy" alt={card.alt} className="bonuses-card__image" />
-              </div>
-
-              <div className="bonuses-card__check" aria-hidden="true">
-                <CheckMark />
+                <div className="bonuses-card__check" aria-hidden="true">
+                  <CheckMark />
+                </div>
               </div>
 
               <div className="bonuses-card__body">

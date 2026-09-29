@@ -55,7 +55,7 @@ const PLANS: TariffPlan[] = [
       'Детальна інструкція з отримання статусу мерчанта',
     ],
     result:
-      "Глибоке розуміння ринку, дохід від 1000$+ на місяць, реальна можливість потрапити до команди FranklinP2P. Можливо окупити вартість навчання ще під час проходження курсу.",
+      "Глибоке розуміння ринку, дохід від 1000$+ на місяць, реальна можливість потрапити до команди REMARENKO P2P. Можливо окупити вартість навчання ще під час проходження курсу.",
     oldPrice: '700$',
     price: '450$',
     ctaHref: 'https://secure.wayforpay.com/button/b6575f6df9966',
@@ -78,7 +78,7 @@ const PLANS: TariffPlan[] = [
       "Робочі зв'язки з прибутком 1–5%",
     ],
     result:
-      'Розуміння, як масштабуватись до стабільного доходу 1500–2000$+ щомісяця. Можливість увійти до команди FranklinP2P або побудувати власну.',
+      'Розуміння, як масштабуватись до стабільного доходу 1500–2000$+ щомісяця. Можливість увійти до команди REMARENKO P2P або побудувати власну.',
     oldPrice: '1200$',
     price: '790$',
     ctaHref: 'https://secure.wayforpay.com/button/bd2998359eb9d',
@@ -86,13 +86,21 @@ const PLANS: TariffPlan[] = [
   },
 ] as const;
 
-function TariffCard({ plan }: { plan: TariffPlan }) {
+function TariffCard({ plan, index }: { plan: TariffPlan; index: number }) {
   return (
     <article className={`tariff-v3__card tariff-v3__card--${plan.code}`}>
       <div className="tariff-v3__card-top">
-        {plan.labelTop ? <div className="tariff-v3__badge">{plan.labelTop}</div> : <div className="tariff-v3__cap" />}
+        <div className="tariff-v3__eyebrow">
+          <div className={`tariff-v3__badge tariff-v3__badge--${plan.code}`}>
+            {plan.labelTop ?? 'Старт'}
+          </div>
+          <span className="tariff-v3__plan-index" aria-hidden="true">
+            0{index + 1}
+          </span>
+        </div>
         <div className="tariff-v3__tariff-label">тариф:</div>
         <h3 className="tariff-v3__name">{plan.name}</h3>
+        {plan.code === 'pro' && <div className="tariff-v3__recommended">Найпопулярніший</div>}
       </div>
 
       <div className="tariff-v3__divider" aria-hidden="true" />
@@ -135,8 +143,8 @@ export default function SectionTariff() {
         </h2>
 
         <div className="tariff-v3__grid">
-          {PLANS.map((plan) => (
-            <TariffCard key={plan.code} plan={plan} />
+          {PLANS.map((plan, index) => (
+            <TariffCard key={plan.code} plan={plan} index={index} />
           ))}
         </div>
       </div>

@@ -24,11 +24,11 @@
   font-weight: 800;
   line-height: 1.05;
   letter-spacing: 0;
-  color: #fff;
+  color: var(--ivory);
 }
 
 .tariff-v3__title-accent {
-  color: #ff6a2e;
+  color: var(--gold);
 }
 
 .tariff-v3__grid {
@@ -47,7 +47,7 @@
   min-height: clamp(720px, 66vw, 980px);
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(var(--ivory-rgb), 0.14);
   box-shadow: 0 26px 64px rgba(0, 0, 0, 0.42);
 }
 
@@ -57,12 +57,12 @@
 
 .tariff-v3__card--pro {
   background: linear-gradient(180deg, rgba(235, 235, 235, 0.9), rgba(190, 190, 190, 0.88));
-  border-color: rgba(255, 255, 255, 0.35);
+  border-color: rgba(var(--ivory-rgb), 0.35);
 }
 
 .tariff-v3__card--master {
   background: linear-gradient(180deg, rgba(190, 30, 24, 0.94), rgba(175, 115, 22, 0.92));
-  border-color: rgba(255, 255, 255, 0.16);
+  border-color: rgba(var(--ivory-rgb), 0.16);
 }
 
 .tariff-v3__card-top {
@@ -84,7 +84,7 @@
   height: 26px;
   padding: 0 12px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(var(--ivory-rgb), 0.92);
   color: #111;
   font-family: Manrope, sans-serif;
   font-size: 12px;
@@ -96,7 +96,7 @@
   font-family: Manrope, sans-serif;
   font-size: 11px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(var(--ivory-rgb), 0.55);
 }
 
 .tariff-v3__card--pro .tariff-v3__tariff-label {
@@ -110,7 +110,7 @@
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0;
-  color: #fff;
+  color: var(--ivory);
 }
 
 .tariff-v3__card--pro .tariff-v3__name {
@@ -120,7 +120,7 @@
 .tariff-v3__divider {
   margin: 18px clamp(22px, 2.2vw, 30px) 0;
   height: 1px;
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(var(--ivory-rgb), 0.16);
 }
 
 .tariff-v3__card--pro .tariff-v3__divider {
@@ -146,7 +146,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #ffd84d;
+  background: var(--gold-light);
   margin-top: 8px;
   flex: 0 0 auto;
 }
@@ -155,7 +155,7 @@
   font-family: Manrope, sans-serif;
   font-size: 13.5px;
   line-height: 1.55;
-  color: rgba(255, 255, 255, 0.84);
+  color: rgba(var(--ivory-rgb), 0.84);
 }
 
 .tariff-v3__card--pro .tariff-v3__li-text {
@@ -171,7 +171,7 @@
   font-family: Unbounded, sans-serif;
   font-size: 14px;
   text-transform: uppercase;
-  color: #ffd84d;
+  color: var(--gold-light);
   margin-bottom: 6px;
 }
 
@@ -184,7 +184,7 @@
   font-family: Manrope, sans-serif;
   font-size: 12.5px;
   line-height: 1.42;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(var(--ivory-rgb), 0.72);
 }
 
 .tariff-v3__card--pro .tariff-v3__result-text {
@@ -203,7 +203,7 @@
 .tariff-v3__old {
   font-family: Unbounded, sans-serif;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(var(--ivory-rgb), 0.5);
   text-decoration: line-through;
 }
 
@@ -215,7 +215,7 @@
   font-family: Unbounded, sans-serif;
   font-size: clamp(28px, 2.3vw, 42px);
   font-weight: 900;
-  color: #fff;
+  color: var(--ivory);
   margin-top: 4px;
 }
 
@@ -235,7 +235,7 @@
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 0;
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(var(--ivory-rgb), 0.96);
   color: #111;
   transition: transform 200ms ease, box-shadow 200ms ease, filter 200ms ease;
 }
@@ -248,7 +248,7 @@
 }
 
 .tariff-v3__cta--master {
-  color: #ff3a3a;
+  color: var(--ink);
 }
 
 @media screen and (max-width: 991px) {

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import '../offer.css';
 
 export const metadata: Metadata = {
-  title: 'Договір публічної оферти — Franklin P2P Education',
+  title: 'Договір публічної оферти — REMARENKO P2P Education',
   description: 'Офіційний договір публічної оферти ФОП Ремаренка Михайла Петровича щодо надання доступу до навчальних матеріалів.',
 };
 
@@ -197,7 +197,7 @@ export default function OfferPage() {
             </svg>
             Повернутися на головну
           </Link>
-          <span className="offer-page__copy">© {new Date().getFullYear()} Franklin P2P Education</span>
+          <span className="offer-page__copy">© {new Date().getFullYear()} REMARENKO P2P Education</span>
         </footer>
       </div>
     </div>

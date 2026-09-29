@@ -26,7 +26,7 @@ export default function Footer() {
       </div>
 
       <div className="site-footer__copyright">
-        © {new Date().getFullYear()} Franklin P2P Education. Усі права захищені.
+        © {new Date().getFullYear()} REMARENKO P2P Education. Усі права захищені.
       </div>
     </footer>
   );

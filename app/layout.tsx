@@ -10,9 +10,10 @@ import './section-calc.css';
 import './section-my-results.css';
 import './offer.css';
 import './mobile.css';
+import './palette.css';
 
 export const metadata: Metadata = {
-  title: 'FRANKLIN P2P EDUCATION — Опануй професію майбутнього',
+  title: 'REMARENKO P2P EDUCATION — Опануй професію майбутнього',
   description:
     'Міні-курс по P2P торгівлі. Опануй сферу P2P за 7 днів та почни заробляти від 500$.',
 };

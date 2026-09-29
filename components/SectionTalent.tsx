@@ -49,15 +49,14 @@ export default function SectionTalent() {
               <span className="talanta-section__title-light">ТАЛАНТА НЕ ІСНУЄ</span>
             </span>
             <span className="talanta-section__title-line">
-              <span className="talanta-section__title-light">АБО </span>
-              <span className="talanta-section__title-gradient">АБО P2P-ТРЕЙДЕРАМИ НЕ</span>
+              <span className="talanta-section__title-gradient">P2P-ТРЕЙДЕРАМИ НЕ</span>
             </span>
             <span className="talanta-section__title-line">
               <span className="talanta-section__title-gradient">НАРОДЖУЮТЬСЯ</span>
             </span>
           </h2>
           <p className="talanta-section__intro">
-            Ми в <strong>FRANKLIN P2P EDUCATION</strong> віримо в силу бажання та наполегливості.
+            Ми в <strong>REMARENKO P2P EDUCATION</strong> віримо в силу бажання та наполегливості.
           </p>
         </header>
 

@@ -4,12 +4,12 @@
 
 .calc-wrapper {
   background: #111;
-  border: 1px solid rgba(241, 211, 2, 0.15);
+  border: 1px solid rgba(var(--gold-rgb), 0.15);
   border-radius: 24px;
   padding: 40px 48px;
   max-width: 860px;
   margin: 0 auto;
-  box-shadow: 0 0 60px rgba(241, 211, 2, 0.06);
+  box-shadow: 0 0 60px rgba(var(--gold-rgb), 0.06);
 }
 
 /* Header */
@@ -29,8 +29,8 @@
   width: 52px;
   height: 52px;
   border-radius: 14px;
-  background: rgba(241, 211, 2, 0.1);
-  border: 1px solid rgba(241, 211, 2, 0.25);
+  background: rgba(var(--gold-rgb), 0.1);
+  border: 1px solid rgba(var(--gold-rgb), 0.25);
   margin-bottom: 4px;
 }
 
@@ -38,7 +38,7 @@
   font-family: Unbounded, Impact, sans-serif;
   font-weight: 700;
   font-size: clamp(18px, 2.2vw, 28px);
-  color: #fff;
+  color: var(--ivory);
   margin: 0;
   line-height: 1.2;
   text-transform: uppercase;
@@ -46,11 +46,11 @@
 }
 
 .calc-title--accent {
-  color: #f1d302;
+  color: var(--gold);
 }
 
 .calc-desc {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(var(--ivory-rgb), 0.5);
   font-family: Montserrat, sans-serif;
   font-size: 14px;
   margin: 0;
@@ -68,8 +68,8 @@
   grid-template-columns: 200px 1fr 72px;
   align-items: center;
   gap: 20px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(var(--ivory-rgb), 0.04);
+  border: 1px solid rgba(var(--ivory-rgb), 0.07);
   border-radius: 14px;
   padding: 18px 20px;
 }
@@ -87,9 +87,9 @@
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background: rgba(241, 211, 2, 0.1);
-  border: 1px solid rgba(241, 211, 2, 0.2);
-  color: #f1d302;
+  background: rgba(var(--gold-rgb), 0.1);
+  border: 1px solid rgba(var(--gold-rgb), 0.2);
+  color: var(--gold);
   flex-shrink: 0;
 }
 
@@ -97,7 +97,7 @@
   font-family: Montserrat, sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #fff;
+  color: var(--ivory);
 }
 
 .calc-row__slider-wrap {
@@ -111,7 +111,7 @@
   justify-content: space-between;
   font-family: Montserrat, sans-serif;
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(var(--ivory-rgb), 0.3);
 }
 
 /* Slider */
@@ -123,10 +123,10 @@
   border-radius: 99px;
   background: linear-gradient(
     to right,
-    #f1d302 0%,
-    #f1d302 var(--pct, 50%),
-    rgba(255, 255, 255, 0.12) var(--pct, 50%),
-    rgba(255, 255, 255, 0.12) 100%
+    var(--gold) 0%,
+    var(--gold) var(--pct, 50%),
+    rgba(var(--ivory-rgb), 0.12) var(--pct, 50%),
+    rgba(var(--ivory-rgb), 0.12) 100%
   );
   outline: none;
   cursor: pointer;
@@ -138,14 +138,14 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #f1d302;
-  box-shadow: 0 0 0 3px rgba(241, 211, 2, 0.25);
+  background: var(--gold);
+  box-shadow: 0 0 0 3px rgba(var(--gold-rgb), 0.25);
   cursor: pointer;
   transition: box-shadow 0.2s;
 }
 
 .calc-slider::-webkit-slider-thumb:hover {
-  box-shadow: 0 0 0 6px rgba(241, 211, 2, 0.2);
+  box-shadow: 0 0 0 6px rgba(var(--gold-rgb), 0.2);
 }
 
 .calc-slider::-moz-range-thumb {
@@ -153,13 +153,13 @@
   height: 20px;
   border-radius: 50%;
   border: none;
-  background: #f1d302;
-  box-shadow: 0 0 0 3px rgba(241, 211, 2, 0.25);
+  background: var(--gold);
+  box-shadow: 0 0 0 3px rgba(var(--gold-rgb), 0.25);
   cursor: pointer;
 }
 
 .calc-row__value {
-  background: #f1d302;
+  background: var(--gold);
   color: #0e0e0e;
   font-family: Montserrat, sans-serif;
   font-size: 18px;
@@ -173,8 +173,8 @@
 /* Result */
 .calc-result {
   margin-top: 24px;
-  background: linear-gradient(135deg, rgba(241, 211, 2, 0.1) 0%, rgba(241, 211, 2, 0.04) 100%);
-  border: 1px solid rgba(241, 211, 2, 0.3);
+  background: linear-gradient(135deg, rgba(var(--gold-rgb), 0.1) 0%, rgba(var(--gold-rgb), 0.04) 100%);
+  border: 1px solid rgba(var(--gold-rgb), 0.3);
   border-radius: 16px;
   padding: 28px 32px;
 }
@@ -193,21 +193,21 @@
 .calc-result__label {
   font-family: Montserrat, sans-serif;
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(var(--ivory-rgb), 0.6);
 }
 
 .calc-result__amount {
   font-family: Unbounded, Impact, sans-serif;
   font-size: clamp(26px, 3.5vw, 40px);
   font-weight: 700;
-  color: #f1d302;
+  color: var(--gold);
   line-height: 1.1;
   white-space: nowrap;
 }
 
 .calc-result__divider {
   height: 1px;
-  background: rgba(241, 211, 2, 0.15);
+  background: rgba(var(--gold-rgb), 0.15);
   margin: 16px 0;
 }
 
@@ -215,7 +215,7 @@
   font-family: Montserrat, sans-serif;
   font-size: clamp(18px, 2vw, 24px);
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(var(--ivory-rgb), 0.75);
   white-space: nowrap;
 }
 
@@ -223,7 +223,7 @@
   margin: 16px 0 0;
   font-family: Montserrat, sans-serif;
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(var(--ivory-rgb), 0.3);
   line-height: 1.5;
 }
 

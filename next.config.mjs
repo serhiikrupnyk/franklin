@@ -1,3 +1,5 @@
+import { PHASE_DEVELOPMENT_SERVER } from 'next/constants.js';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -17,4 +19,8 @@ const nextConfig = {
   poweredByHeader: false,
 };
 
-export default nextConfig;
+export default (phase) => ({
+  ...nextConfig,
+  // Keep production builds from overwriting the running dev server's files.
+  distDir: phase === PHASE_DEVELOPMENT_SERVER ? '.next-dev' : '.next',
+});

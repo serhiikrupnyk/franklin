@@ -26,11 +26,11 @@ export default function SectionHowLearning() {
                     <line x1="16" y1="17" x2="8" y2="17" />
                   </svg>
                 </span>
-                <span className="how-learning__card-num">( 01 )</span>
+                <span className="how-learning__card-num">01</span>
               </div>
+              <h3 className="how-learning__card-title">ОРГАНІЗАЦІЯ НАВЧАННЯ</h3>
               <p className="how-learning__card-text">
-                <span className="how-learning__card-accent">Зручна організація навчання,</span>{" "}
-                все структуровано в Telegram та розподілено по блоках для максимальної зручності
+                Усе структуровано в Telegram та розподілено по блоках для максимальної зручності.
               </p>
             </div>
 
@@ -41,7 +41,7 @@ export default function SectionHowLearning() {
                     <path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
                   </svg>
                 </span>
-                <span className="how-learning__card-num">( 03 )</span>
+                <span className="how-learning__card-num">03</span>
               </div>
               <h3 className="how-learning__card-title">ГРУПОВІ ЗІДЗВОНИ</h3>
               <p className="how-learning__card-text">
@@ -60,7 +60,7 @@ export default function SectionHowLearning() {
                     <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                   </svg>
                 </span>
-                <span className="how-learning__card-num">( 05 )</span>
+                <span className="how-learning__card-num">05</span>
               </div>
               <h3 className="how-learning__card-title">ПРОФЕСІЙНІ КУРАТОРИ</h3>
               <p className="how-learning__card-text">
@@ -78,7 +78,7 @@ export default function SectionHowLearning() {
                     <path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-8.609 3.33c-2.068.8-4.133 1.598-5.724 2.21a405.15 405.15 0 0 1-2.849 1.09c-.42.147-.99.332-1.473.901-.728.855-.49 1.716-.09 2.392.326.556.907.98 1.192 1.128l3.455 1.527a1 1 0 0 1 .57.632l1.118 3.78c.136.464.396.94.865 1.26.47.322 1.025.376 1.502.283.548-.106.956-.457 1.14-.634l2.324-2.324 3.456 2.593a2.34 2.34 0 0 0 3.279-.757c.085-.142.15-.294.194-.454l3.065-14.18a2.242 2.242 0 0 0-2.393-2.992Z" />
                   </svg>
                 </span>
-                <span className="how-learning__card-num">( 02 )</span>
+                <span className="how-learning__card-num">02</span>
               </div>
               <h3 className="how-learning__card-title">TELEGRAM</h3>
               <p className="how-learning__card-text">
@@ -95,11 +95,12 @@ export default function SectionHowLearning() {
                     <line x1="12" y1="17" x2="12.01" y2="17" />
                   </svg>
                 </span>
-                <span className="how-learning__card-num">( 04 )</span>
+                <span className="how-learning__card-num">04</span>
               </div>
+              <h3 className="how-learning__card-title">Q&amp;A-СЕСІЇ</h3>
               <p className="how-learning__card-text">
-                <span className="how-learning__card-accent">3 сесії «запитань‑відповідей»,</span>{" "}
-                де ви зможете задати питання та поспілкуватися зі експертом
+                <span className="how-learning__card-accent">3 живі зустрічі,</span>{" "}
+                де ви зможете поставити питання та поспілкуватися з експертом.
               </p>
             </div>
           </div>
