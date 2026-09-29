@@ -82,7 +82,7 @@ export default function SectionHowLearning() {
               </div>
               <h3 className="how-learning__card-title">TELEGRAM</h3>
               <p className="how-learning__card-text">
-                Загальний чат спілкування для студентів курсу, тарифів PRO та INDIVIDUAL.
+                Загальний чат спілкування для студентів курсу, тарифів PRO та P2P MASTER.
               </p>
             </div>
 

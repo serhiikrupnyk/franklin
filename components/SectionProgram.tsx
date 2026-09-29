@@ -265,7 +265,7 @@ export default function SectionProgram() {
               })}
               <p className="program-v2__divider unbounded_70">
                 <span className="program-v2__divider-light">Тільки для </span>
-                <span className="program-v2__divider-dark">pro ta individual</span>
+                <span className="program-v2__divider-dark">PRO та P2P MASTER</span>
               </p>
               {MODULES_PRO.map((mod) => {
                 const idx = iconCounter++;
@@ -275,8 +275,7 @@ export default function SectionProgram() {
                 <div className="program-v2__more">
                   <p className="program-v2__divider program-v2__divider--spec unbounded_70">
                     <span className="program-v2__divider-light">Тільки для </span>
-                    <span className="program-v2__divider-dark">pro</span>
-                    <span className="program-v2__divider-light"> ta specail</span>
+                    <span className="program-v2__divider-dark">PRO та P2P MASTER</span>
                   </p>
                   {MODULES_EXTRA.map((mod) => {
                     const idx = iconCounter++;
