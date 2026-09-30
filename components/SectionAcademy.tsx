@@ -30,9 +30,9 @@ export default function SectionAcademy() {
               1500
             </div>
             <img
-              src="/images/WITHOUTBACK.webp"
+              src="/images/IMG_0394.PNG"
               loading="lazy"
-              alt=""
+              alt="Ремаренко біля автомобіля BMW"
               className="academy-v2__hero"
             />
 

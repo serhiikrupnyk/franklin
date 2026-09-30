@@ -1626,11 +1626,19 @@ body {
 }
 
 .academy-v2__big {
-  left: 24px;
-  top: 12px;
-  font-size: clamp(150px, 15vw, 278px);
-  color: rgba(var(--silver-rgb), 0.085);
+  left: clamp(24px, 2.2vw, 42px);
+  top: clamp(26px, 2.2vw, 42px);
+  z-index: 2;
+  font-size: clamp(122px, 8.3vw, 160px);
+  color: rgba(var(--silver-rgb), 0.13);
   line-height: 0.86;
+  letter-spacing: -0.075em;
+  background: linear-gradient(180deg, rgba(var(--silver-rgb), 0.2), rgba(var(--gold-rgb), 0.08));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgba(var(--gold-rgb), 0.16);
+  filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.32));
 }
 
 .academy-v2__hero {
@@ -1641,13 +1649,13 @@ body {
   max-width: none;
   height: 100%;
   margin: 0;
-  object-fit: contain;
-  object-position: left bottom;
+  object-fit: cover;
+  object-position: 56% 44%;
   transform: none;
   transform-origin: center bottom;
-  filter: grayscale(1) contrast(1.08) brightness(0.76);
-  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 84%, rgba(0, 0, 0, 0.62) 94%, transparent 100%);
-  mask-image: linear-gradient(180deg, #000 0%, #000 84%, rgba(0, 0, 0, 0.62) 94%, transparent 100%);
+  filter: saturate(0.7) contrast(1.08) brightness(0.74);
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 76%, rgba(0, 0, 0, 0.74) 88%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 76%, rgba(0, 0, 0, 0.74) 88%, transparent 100%);
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
 }
@@ -1901,10 +1909,11 @@ body {
   .academy-v2__big {
     position: absolute;
     display: block;
-    left: 14px;
-    top: 16px;
+    left: 18px;
+    top: 22px;
     padding: 0;
-    font-size: 104px;
+    font-size: clamp(68px, 20vw, 80px);
+    z-index: 2;
   }
 
   .academy-v2__hero {
