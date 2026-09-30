@@ -11,6 +11,7 @@ import './section-my-results.css';
 import './offer.css';
 import './mobile.css';
 import './palette.css';
+import './animations.css';
 
 export const metadata: Metadata = {
   title: 'REMARENKO P2P EDUCATION — Опануй професію майбутнього',

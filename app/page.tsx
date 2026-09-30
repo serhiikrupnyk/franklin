@@ -14,10 +14,12 @@ import SectionMyResults from '@/components/SectionMyResults';
 import SectionReviews from '@/components/SectionReviews';
 import SectionFaq from '@/components/SectionFaq';
 import Footer from '@/components/Footer';
+import ScrollReveal from '@/components/ScrollReveal';
 
 export default function Page() {
   return (
     <div className="page-wrapper">
+      <ScrollReveal />
       <img
         src="/images/67090a00bdc7f308273e71f2_%D0%A8%D0%A3%D0%9C.webp"
         loading="lazy"
