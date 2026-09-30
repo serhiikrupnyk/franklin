@@ -33,8 +33,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link
           rel="preload"
           as="image"
-          href="/images/man-color-transparent.webp"
-          type="image/webp"
+          href="/images/IMG000-boy-cutout.png"
+          type="image/png"
           fetchPriority="high"
         />
       </head>

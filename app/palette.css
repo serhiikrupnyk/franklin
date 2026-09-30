@@ -55,6 +55,35 @@ body {
 
 .hero-v2__brand-bg { color: rgba(var(--silver-rgb), 0.34); }
 .hero-darkness { background-image: linear-gradient(180deg, transparent, var(--canvas)); }
+.hero-v2__man {
+  left: clamp(-280px, -13vw, -180px);
+  top: clamp(18px, 1.5vw, 32px);
+  bottom: auto;
+  width: min(54vw, 1040px);
+  height: auto;
+  max-width: none;
+  object-fit: contain;
+  object-position: center top;
+  filter: grayscale(0.14) saturate(0.76) contrast(1.1) brightness(0.8)
+    drop-shadow(0 26px 34px rgba(0, 0, 0, 0.7))
+    drop-shadow(7px 1px 10px rgba(var(--gold-rgb), 0.16));
+  -webkit-mask-image:
+    linear-gradient(to right, #000 0%, #000 68%, rgba(0, 0, 0, 0.72) 82%, transparent 100%),
+    linear-gradient(to bottom, #000 0%, #000 45%, rgba(0, 0, 0, 0.84) 49%, transparent 55%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, #000 0%, #000 68%, rgba(0, 0, 0, 0.72) 82%, transparent 100%),
+    linear-gradient(to bottom, #000 0%, #000 45%, rgba(0, 0, 0, 0.84) 49%, transparent 55%);
+  mask-composite: intersect;
+}
+
+@media (min-width: 992px) {
+  .hero-v2,
+  .hero-v2__inner {
+    min-height: clamp(780px, 56vw, 1100px);
+  }
+}
+
 .hero-v2__badge { border-color: rgba(var(--gold-rgb), 0.22); }
 .hero-v2__contacts-label { color: var(--muted); }
 
@@ -1923,6 +1952,28 @@ body {
   .academy-v2__cta { font-size: 11px; }
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-v2__bg {
+    background-image: linear-gradient(135deg, #28241d 0%, #111315 58%, var(--canvas) 100%);
+  }
+
+  .hero-v2__man {
+    display: block;
+    left: auto;
+    right: -7vw;
+    top: 2vw;
+    width: 68vw;
+    height: auto;
+    max-width: none;
+  }
+
+  .hero-v2__brand-bg {
+    display: flex;
+    padding: 6vw 46vw 3vw 5vw;
+    font-size: 6vw;
+  }
+}
+
 /* Mobile finishing pass. These rules stay isolated from the desktop layout. */
 @media (max-width: 767px) {
   html,
@@ -1940,8 +1991,18 @@ body {
   }
 
   .hero-v2__man {
-    right: 0;
-    max-width: 62vw;
+    left: auto;
+    right: -36vw;
+    top: 28vw;
+    bottom: auto;
+    width: 125vw;
+    height: auto;
+    max-width: none;
+    object-position: center top;
+    filter: grayscale(0.18) saturate(0.68) contrast(1.06) brightness(0.74)
+      drop-shadow(10px 14px 22px rgba(0, 0, 0, 0.42));
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 43%, rgba(0, 0, 0, 0.82) 48%, transparent 55%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 43%, rgba(0, 0, 0, 0.82) 48%, transparent 55%);
   }
 
   .hero-v2__main {

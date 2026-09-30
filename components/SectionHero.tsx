@@ -21,7 +21,7 @@ export default function SectionHero() {
         <span className="hero-v2__brand-line">EDUCATION</span>
       </div>
       <img
-        src="/images/man-color-transparent.webp"
+        src="/images/IMG000-boy-cutout.png"
         loading="eager"
         fetchPriority="high"
         decoding="async"
