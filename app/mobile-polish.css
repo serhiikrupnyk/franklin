@@ -1,0 +1,92 @@
+/*
+ * Final mobile layer.
+ *
+ * Some section themes are loaded after mobile.css and intentionally restore
+ * desktop decoration. Keep the mobile safety rules last so decorative media
+ * always stays behind content and never covers copy on narrow screens.
+ */
+@media (max-width: 767px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Hero artwork is atmospheric on mobile; all actionable content stays on top. */
+  .hero-v2 {
+    isolation: isolate;
+  }
+
+  .hero-v2__bg,
+  .hero-v2 .hero-darkness {
+    z-index: 0;
+  }
+
+  .hero-v2__brand-bg {
+    z-index: 1;
+  }
+
+  .hero-v2__man {
+    z-index: 2;
+  }
+
+  .hero-v2 > .container {
+    position: relative;
+    z-index: 3;
+  }
+
+  .hero-v2__details,
+  .hero-v2__buttons,
+  .hero-v2__contacts {
+    position: relative;
+    z-index: 4;
+  }
+
+  /* Loose collage pieces are removed on phones: they have no semantic value. */
+  .about-v2 .about-img,
+  .about-v2 > .about-decor-img-mob,
+  .section-video > .about-decor-img-mob,
+  .program-v2__paper,
+  .program-v2__paper--top,
+  .program-v2__paper--bottom,
+  .how-learning__bg,
+  .talanta-section__shard,
+  .academy-v2__shard,
+  .section-faq > .faq-decor-img,
+  .section-speakers .bonuses-img-up {
+    display: none !important;
+  }
+
+  /* Content establishes its own layer above section backgrounds and dividers. */
+  .about-v2 > .container,
+  .section-video > .container,
+  .section-who.who-v2 > .container,
+  .program-v2 > .container,
+  .how-learning > .container,
+  .bonuses-section > .container,
+  .talanta-section > .container,
+  .tariff-v3 > .container,
+  .academy-v2 > .container,
+  .section-faq > .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Card ornaments remain visible, while copy and icons are always above them. */
+  .who-v2 .who-center-point,
+  .tariff-v3__card,
+  .academy-v2__stat {
+    isolation: isolate;
+  }
+
+  .who-v2 .who-center-point > *,
+  .tariff-v3__card > *,
+  .academy-v2__stat > * {
+    z-index: 1;
+  }
+
+  .academy-v2__stat-icon {
+    position: absolute;
+  }
+}

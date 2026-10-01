@@ -12,6 +12,7 @@ import './offer.css';
 import './mobile.css';
 import './palette.css';
 import './animations.css';
+import './mobile-polish.css';
 import './proportional-desktop.css';
 
 export const metadata: Metadata = {
