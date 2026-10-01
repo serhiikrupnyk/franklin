@@ -14517,6 +14517,14 @@ body {
   border: none;
 }
 
+.rv2-modal__media {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #050505;
+}
+
 /* Responsive */
 @media (max-width: 991px) {
   .rv2-card {

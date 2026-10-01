@@ -1,19 +1,56 @@
 'use client';
 import { useRef, useState, useEffect, useCallback } from 'react';
 
-const REVIEWS = [
-  { id: 'QsANXKlRJnc', name: 'Відгук 1' },
-  { id: 'ZpuWZnh-LVg', name: 'Відгук 2' },
-  { id: '0ITpBuwPiZs', name: 'Відгук 3' },
-  { id: 'JziV0faU2Ao', name: 'Відгук 4' },
-  { id: 'Kwa5bRVSilk', name: 'Відгук 5' },
-  { id: 't3vAvEy7f7Q', name: 'Відгук 6' },
+type Review =
+  | { key: string; type: 'video'; src: string; poster: string; name: string }
+  | { key: string; type: 'image'; src: string; name: string };
+
+const REVIEWS: Review[] = [
+  {
+    key: 'local-video-6555',
+    type: 'video',
+    src: '/images/IMG_6555.mp4',
+    poster: '/images/IMG_6555-poster.webp',
+    name: 'Відеовідгук учня',
+  },
+  {
+    key: 'local-video-4221',
+    type: 'video',
+    src: '/images/IMG_4221.mp4',
+    poster: '/images/IMG_4221-poster.webp',
+    name: 'Результат учениці після навчання',
+  },
+  {
+    key: 'local-photo-0302',
+    type: 'image',
+    src: '/images/photo_2025-03-02_18-42-04.jpg',
+    name: 'Відгук про підтримку під час навчання',
+  },
+  {
+    key: 'local-photo-0316',
+    type: 'image',
+    src: '/images/photo_2025-03-16_17-50-06.jpg',
+    name: 'Результат учня після навчання',
+  },
+  {
+    key: 'local-photo-0329-36',
+    type: 'image',
+    src: '/images/photo_2025-03-29_20-46-36.jpg',
+    name: 'Відгук учня про результати',
+  },
+  {
+    key: 'local-photo-0329-39',
+    type: 'image',
+    src: '/images/photo_2025-03-29_20-46-39.jpg',
+    name: 'Продовження відгуку учня',
+  },
 ];
 
 export default function SectionReviews() {
   const trackRef = useRef<HTMLDivElement>(null);
-  const [openId, setOpenId] = useState<string | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [active, setActive] = useState(0);
+  const openReview = openIndex === null ? null : REVIEWS[openIndex];
 
   const goTo = useCallback((idx: number) => {
     const track = trackRef.current;
@@ -40,11 +77,21 @@ export default function SectionReviews() {
         const dist = Math.abs(card.offsetLeft - track.scrollLeft - track.offsetLeft);
         if (dist < minDist) { minDist = dist; closest = i; }
       });
-      setActive(closest);
+      const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+      setActive(atEnd ? cards.length - 1 : closest);
     };
     track.addEventListener('scroll', onScroll, { passive: true });
     return () => track.removeEventListener('scroll', onScroll);
   }, []);
+
+  useEffect(() => {
+    if (openIndex === null) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setOpenIndex(null);
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [openIndex]);
 
   return (
     <section id="reviews" className="rv2-section">
@@ -55,7 +102,7 @@ export default function SectionReviews() {
           <h2 className="rv2-title">
             <span className="rv2-title__accent">Відгуки</span> учнів
           </h2>
-          <p className="rv2-desc">Реальні відео від тих, хто вже пройшов навчання</p>
+          <p className="rv2-desc">Реальні відгуки та результати тих, хто вже пройшов навчання</p>
         </div>
 
         <div className="rv2-slider">
@@ -72,30 +119,43 @@ export default function SectionReviews() {
           </button>
 
           <div className="rv2-track" ref={trackRef}>
-            {REVIEWS.map((r) => (
-              <button
-                key={r.id}
-                type="button"
-                data-slide
-                className="rv2-card"
-                onClick={() => setOpenId(r.id)}
-                aria-label={`Дивитися ${r.name}`}
-              >
-                <img
-                  src={`https://i.ytimg.com/vi/${r.id}/hqdefault.jpg`}
-                  loading="lazy"
-                  alt={r.name}
-                  className="rv2-card__img"
-                />
-                <div className="rv2-card__overlay" />
-                <div className="rv2-card__play">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                    <polygon points="5 3 19 12 5 21 5 3" />
-                  </svg>
-                </div>
-                <span className="rv2-card__label">ПЕРЕГЛЯНУТИ</span>
-              </button>
-            ))}
+            {REVIEWS.map((review, index) => {
+              const preview = review.type === 'video' ? review.poster : review.src;
+
+              return (
+                <button
+                  key={review.key}
+                  type="button"
+                  data-slide
+                  className="rv2-card"
+                  onClick={() => setOpenIndex(index)}
+                  aria-label={`Переглянути ${review.name}`}
+                >
+                  <img
+                    src={preview}
+                    loading="lazy"
+                    alt={review.name}
+                    className="rv2-card__img"
+                  />
+                  <div className="rv2-card__overlay" />
+                  <div className="rv2-card__play">
+                    {review.type === 'image' ? (
+                      <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M8 3H5a2 2 0 0 0-2 2v3" />
+                        <path d="M16 3h3a2 2 0 0 1 2 2v3" />
+                        <path d="M8 21H5a2 2 0 0 1-2-2v-3" />
+                        <path d="M16 21h3a2 2 0 0 0 2-2v-3" />
+                      </svg>
+                    ) : (
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="5 3 19 12 5 21 5 3" />
+                      </svg>
+                    )}
+                  </div>
+                  <span className="rv2-card__label">ПЕРЕГЛЯНУТИ</span>
+                </button>
+              );
+            })}
           </div>
 
           <button
@@ -125,20 +185,28 @@ export default function SectionReviews() {
 
       </div>
 
-      {openId && (
-        <div className="rv2-modal" onClick={() => setOpenId(null)} role="dialog" aria-modal="true">
-          <button type="button" className="rv2-modal__close" onClick={() => setOpenId(null)} aria-label="Закрити">
+      {openReview && (
+        <div className="rv2-modal" onClick={() => setOpenIndex(null)} role="dialog" aria-modal="true" aria-label={openReview.name}>
+          <button type="button" className="rv2-modal__close" onClick={() => setOpenIndex(null)} aria-label="Закрити">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
               <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
             </svg>
           </button>
           <div className="rv2-modal__frame" onClick={(e) => e.stopPropagation()}>
-            <iframe
-              src={`https://www.youtube.com/embed/${openId}?autoplay=1`}
-              title="YouTube відгук"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+            {openReview.type === 'video' && (
+              <video
+                key={openReview.src}
+                src={openReview.src}
+                poster={openReview.poster}
+                controls
+                autoPlay
+                playsInline
+                className="rv2-modal__media"
+              />
+            )}
+            {openReview.type === 'image' && (
+              <img src={openReview.src} alt={openReview.name} className="rv2-modal__media" />
+            )}
           </div>
         </div>
       )}
