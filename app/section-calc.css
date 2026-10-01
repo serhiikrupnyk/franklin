@@ -37,7 +37,7 @@
 .calc-title {
   font-family: Unbounded, Impact, sans-serif;
   font-weight: 700;
-  font-size: clamp(18px, 2.2vw, 28px);
+  font-size: clamp(18px, 2.2cqw, 28px);
   color: var(--ivory);
   margin: 0;
   line-height: 1.2;
@@ -198,7 +198,7 @@
 
 .calc-result__amount {
   font-family: Unbounded, Impact, sans-serif;
-  font-size: clamp(26px, 3.5vw, 40px);
+  font-size: clamp(26px, 3.5cqw, 40px);
   font-weight: 700;
   color: var(--gold);
   line-height: 1.1;
@@ -213,7 +213,7 @@
 
 .calc-result__total {
   font-family: Montserrat, sans-serif;
-  font-size: clamp(18px, 2vw, 24px);
+  font-size: clamp(18px, 2cqw, 24px);
   font-weight: 700;
   color: rgba(var(--ivory-rgb), 0.75);
   white-space: nowrap;
@@ -259,6 +259,6 @@
   }
 
   .calc-result__amount {
-    font-size: clamp(24px, 7vw, 34px);
+    font-size: clamp(24px, 7cqw, 34px);
   }
 }

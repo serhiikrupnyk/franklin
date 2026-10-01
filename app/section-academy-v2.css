@@ -1,7 +1,7 @@
 .academy-v2 {
   position: relative;
   overflow: hidden;
-  padding: clamp(64px, 6.4vw, 116px) 0 clamp(60px, 8vw, 160px);
+  padding: clamp(64px, 6.4cqw, 116px) 0 clamp(60px, 8cqw, 160px);
 }
 
 .academy-v2 .container.academy-v2__container {
@@ -20,13 +20,13 @@
   width: 100%;
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
-  gap: clamp(36px, 5vw, 96px);
+  gap: clamp(36px, 5cqw, 96px);
   align-items: start;
 }
 
 .academy-v2__left {
   position: relative;
-  min-height: clamp(540px, 48vw, 800px);
+  min-height: clamp(540px, 48cqw, 800px);
 }
 
 .academy-v2__big {
@@ -35,7 +35,7 @@
   top: calc(-0.18em + 100px);
   font-family: Unbounded, sans-serif;
   font-weight: 800;
-  font-size: clamp(148px, 22vw, 308px);
+  font-size: clamp(148px, 22cqw, 308px);
   line-height: 0.85;
   color: rgba(var(--ivory-rgb), 0.16);
   letter-spacing: -0.05em;
@@ -49,7 +49,7 @@
   width: min(100%, 680px);
   height: auto;
   display: block;
-  margin-top: clamp(10px, 2vw, 22px);
+  margin-top: clamp(10px, 2cqw, 22px);
   filter: grayscale(1) contrast(1.05) brightness(0.92);
   transform: scale(1.22);
   transform-origin: left top;
@@ -64,12 +64,12 @@
 
 .academy-v2__title {
   position: absolute;
-  left: clamp(110px, 11vw, 180px);
+  left: clamp(110px, 11cqw, 180px);
   bottom: -90px;
   margin: 0;
   font-family: Unbounded, sans-serif;
   font-weight: 800;
-  font-size: 2.6vw;
+  font-size: 2.6cqw;
   line-height: 1.02;
   letter-spacing: -0.01em;
   text-transform: uppercase;
@@ -112,26 +112,26 @@
 }
 
 .academy-v2__right {
-  padding-top: clamp(10px, 9vw, 145px);
-  padding-right: clamp(20px, 4vw, 80px);
+  padding-top: clamp(10px, 9cqw, 145px);
+  padding-right: clamp(20px, 4cqw, 80px);
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: calc(420px + clamp(20px, 4vw, 80px));
+  max-width: calc(420px + clamp(20px, 4cqw, 80px));
   justify-self: center;
   box-sizing: border-box;
 }
 
 .academy-v2__kicker {
   font-family: Unbounded, sans-serif;
-  font-size: clamp(13px, 1.05vw, 16px);
+  font-size: clamp(13px, 1.05cqw, 16px);
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.28;
   color: var(--ivory);
   letter-spacing: 0.02em;
-  margin-bottom: clamp(28px, 3vw, 44px);
+  margin-bottom: clamp(28px, 3cqw, 44px);
   text-align: center;
   width: 100%;
 }
@@ -147,8 +147,8 @@
 .academy-v2__stats {
   display: flex;
   flex-direction: column;
-  gap: clamp(20px, 2.4vw, 34px);
-  margin-bottom: clamp(24px, 2.6vw, 38px);
+  gap: clamp(20px, 2.4cqw, 34px);
+  margin-bottom: clamp(24px, 2.6cqw, 38px);
   width: 100%;
   align-items: center;
 }
@@ -162,7 +162,7 @@
 
 .academy-v2__stat-value {
   font-family: Unbounded, sans-serif;
-  font-size: clamp(72px, 8.4vw, 132px);
+  font-size: clamp(72px, 8.4cqw, 132px);
   font-weight: 800;
   line-height: 0.9;
   color: var(--ivory);
@@ -175,7 +175,7 @@
   align-items: flex-start;
   gap: 8px;
   font-family: Manrope, sans-serif;
-  font-size: clamp(12px, 0.95vw, 14.5px);
+  font-size: clamp(12px, 0.95cqw, 14.5px);
   line-height: 1.42;
   color: rgba(var(--ivory-rgb), 0.78);
   max-width: 24ch;
@@ -211,9 +211,9 @@
 }
 
 .academy-v2__desc {
-  margin: 0 0 clamp(20px, 2vw, 28px);
+  margin: 0 0 clamp(20px, 2cqw, 28px);
   font-family: Manrope, sans-serif;
-  font-size: clamp(11.5px, 0.9vw, 13.5px);
+  font-size: clamp(11.5px, 0.9cqw, 13.5px);
   line-height: 1.55;
   color: rgba(var(--ivory-rgb), 0.6);
   max-width: 36ch;
@@ -234,13 +234,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: clamp(52px, 4.4vw, 64px);
-  padding: 0 clamp(24px, 2.6vw, 38px);
+  height: clamp(52px, 4.4cqw, 64px);
+  padding: 0 clamp(24px, 2.6cqw, 38px);
   border-radius: 999px;
   text-decoration: none;
   text-transform: uppercase;
   font-family: Manrope, sans-serif;
-  font-size: clamp(11px, 0.85vw, 13px);
+  font-size: clamp(11px, 0.85cqw, 13px);
   font-weight: 700;
   letter-spacing: 0.04em;
   color: var(--ivory);
@@ -267,22 +267,22 @@
 }
 
 .academy-v2__shard--tl {
-  width: clamp(70px, 7vw, 110px);
-  left: 2.5vw;
-  top: 2vw;
+  width: clamp(70px, 7cqw, 110px);
+  left: 2.5cqw;
+  top: 2cqw;
   transform: rotate(-12deg);
 }
 
 .academy-v2__shard--br {
-  width: clamp(160px, 16vw, 260px);
-  right: 2vw;
-  bottom: 3vw;
+  width: clamp(160px, 16cqw, 260px);
+  right: 2cqw;
+  bottom: 3cqw;
   transform: rotate(8deg);
 }
 
 .academy-v2__shard--r {
-  width: clamp(56px, 5.2vw, 84px);
-  right: 2vw;
+  width: clamp(56px, 5.2cqw, 84px);
+  right: 2cqw;
   top: 44%;
   transform: rotate(18deg);
 }
@@ -313,7 +313,7 @@
 
   .academy-v2__big {
     position: static;
-    font-size: 22vw;
+    font-size: 22cqw;
     line-height: 0.9;
     margin-bottom: -0.18em;
     padding-left: 16px;

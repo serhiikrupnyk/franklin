@@ -1,0 +1,26 @@
+/*
+ * Desktop is rendered as one 1920px artboard and scaled as a whole.
+ * Together with container-relative units this keeps every proportion intact
+ * across laptop, Full HD and wide desktop screens.
+ */
+.page-wrapper {
+  container-type: inline-size;
+}
+
+@media (min-width: 992px) {
+  html:has(.page-wrapper) {
+    width: 1920px;
+    zoom: var(--desktop-scale, 1);
+    overflow-x: clip;
+  }
+
+  html:has(.page-wrapper) body,
+  html:has(.page-wrapper) .page-wrapper {
+    width: 1920px;
+    max-width: none;
+  }
+
+  html:has(.page-wrapper) .noise {
+    height: var(--desktop-viewport-height, 100vh);
+  }
+}

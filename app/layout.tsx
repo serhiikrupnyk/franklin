@@ -12,6 +12,7 @@ import './offer.css';
 import './mobile.css';
 import './palette.css';
 import './animations.css';
+import './proportional-desktop.css';
 
 export const metadata: Metadata = {
   title: 'REMARENKO P2P EDUCATION — Опануй професію майбутнього',
@@ -23,6 +24,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="uk">
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){function setDesktopScale(){var root=document.documentElement;var width=window.innerWidth;var scale=width/1920;root.style.setProperty('--desktop-scale',String(scale));root.style.setProperty('--desktop-viewport-height',(window.innerHeight/scale)+'px');}setDesktopScale();window.addEventListener('resize',setDesktopScale,{passive:true});})();`,
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://i.ytimg.com" crossOrigin="anonymous" />

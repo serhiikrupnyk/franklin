@@ -1,13 +1,13 @@
 .tariff-v3 {
   position: relative;
   overflow: hidden;
-  padding: clamp(72px, 7vw, 110px) 0 clamp(72px, 7vw, 110px);
+  padding: clamp(72px, 7cqw, 110px) 0 clamp(72px, 7cqw, 110px);
 }
 
 .tariff-v3__container {
   position: relative;
   z-index: 1;
-  width: min(86.979vw, 1280px);
+  width: min(86.979cqw, 1280px);
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
@@ -16,11 +16,11 @@
 }
 
 .tariff-v3__title {
-  margin: 0 0 clamp(26px, 3vw, 44px);
+  margin: 0 0 clamp(26px, 3cqw, 44px);
   text-align: center;
   text-transform: uppercase;
   font-family: Unbounded, sans-serif;
-  font-size: clamp(34px, 3.3vw, 62px);
+  font-size: clamp(34px, 3.3cqw, 62px);
   font-weight: 800;
   line-height: 1.05;
   letter-spacing: 0;
@@ -36,7 +36,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(260px, 340px));
   justify-content: center;
-  gap: clamp(18px, 2.2vw, 34px);
+  gap: clamp(18px, 2.2cqw, 34px);
   align-items: stretch;
 }
 
@@ -44,7 +44,7 @@
   position: relative;
   border-radius: 26px;
   overflow: hidden;
-  min-height: clamp(720px, 66vw, 980px);
+  min-height: clamp(720px, 66cqw, 980px);
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(var(--ivory-rgb), 0.14);
@@ -66,7 +66,7 @@
 }
 
 .tariff-v3__card-top {
-  padding: clamp(22px, 2.1vw, 30px) clamp(22px, 2.2vw, 30px) 0;
+  padding: clamp(22px, 2.1cqw, 30px) clamp(22px, 2.2cqw, 30px) 0;
 }
 
 .tariff-v3__cap {
@@ -106,7 +106,7 @@
 .tariff-v3__name {
   margin: 6px 0 0;
   font-family: Unbounded, sans-serif;
-  font-size: clamp(26px, 2.1vw, 40px);
+  font-size: clamp(26px, 2.1cqw, 40px);
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0;
@@ -118,7 +118,7 @@
 }
 
 .tariff-v3__divider {
-  margin: 18px clamp(22px, 2.2vw, 30px) 0;
+  margin: 18px clamp(22px, 2.2cqw, 30px) 0;
   height: 1px;
   background: rgba(var(--ivory-rgb), 0.16);
 }
@@ -129,7 +129,7 @@
 
 .tariff-v3__list {
   list-style: none;
-  padding: 18px clamp(22px, 2.2vw, 30px) 0;
+  padding: 18px clamp(22px, 2.2cqw, 30px) 0;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -164,7 +164,7 @@
 
 .tariff-v3__result {
   margin-top: auto;
-  padding: 22px clamp(22px, 2.2vw, 30px) 0;
+  padding: 22px clamp(22px, 2.2cqw, 30px) 0;
 }
 
 .tariff-v3__result-title {
@@ -192,7 +192,7 @@
 }
 
 .tariff-v3__bottom {
-  padding: 22px clamp(22px, 2.2vw, 30px) clamp(22px, 2.2vw, 30px);
+  padding: 22px clamp(22px, 2.2cqw, 30px) clamp(22px, 2.2cqw, 30px);
 }
 
 .tariff-v3__prices {
@@ -213,7 +213,7 @@
 
 .tariff-v3__price {
   font-family: Unbounded, sans-serif;
-  font-size: clamp(28px, 2.3vw, 42px);
+  font-size: clamp(28px, 2.3cqw, 42px);
   font-weight: 900;
   color: var(--ivory);
   margin-top: 4px;
@@ -253,7 +253,7 @@
 
 @media screen and (max-width: 991px) {
   .tariff-v3__container {
-    width: 92vw;
+    width: 92cqw;
   }
 
   .tariff-v3__grid {
