@@ -1,17 +1,60 @@
 "use client";
 import { useMemo, useState } from "react";
 
+const superscriptDigits: Record<string, string> = {
+  "0": "⁰",
+  "1": "¹",
+  "2": "²",
+  "3": "³",
+  "4": "⁴",
+  "5": "⁵",
+  "6": "⁶",
+  "7": "⁷",
+  "8": "⁸",
+  "9": "⁹",
+};
+
+function formatScientificMoney(log10Value: number) {
+  let exponent = Math.floor(log10Value);
+  let mantissa = Number(Math.pow(10, log10Value - exponent).toFixed(2));
+
+  if (mantissa >= 10) {
+    mantissa = 1;
+    exponent += 1;
+  }
+
+  const superscriptExponent = String(exponent)
+    .split("")
+    .map((digit) => superscriptDigits[digit] ?? digit)
+    .join("");
+
+  return `$${mantissa.toLocaleString("en-US", { maximumFractionDigits: 2 })} × 10${superscriptExponent}`;
+}
+
 export default function SectionCalc() {
   const [budget, setBudget] = useState(1000);
   const [percent, setPercent] = useState(0.7);
   const [cycles, setCycles] = useState(3);
   const [days, setDays] = useState(30);
 
-  const { profit, total } = useMemo(() => {
+  const { profitText, totalText } = useMemo(() => {
     const p = percent / 100;
     const totalCycles = cycles * days;
+    const log10Total = Math.log10(budget) + totalCycles * Math.log10(1 + p);
+
+    // Past this point the full integer no longer fits comfortably in the UI
+    // (and extreme settings eventually exceed JavaScript's numeric range).
+    if (log10Total >= 10) {
+      const compactValue = formatScientificMoney(log10Total);
+      return { profitText: compactValue, totalText: compactValue };
+    }
+
     const total = budget * Math.pow(1 + p, totalCycles);
-    return { profit: Math.round(total - budget), total: Math.round(total) };
+    const profit = Math.round(total - budget);
+    return {
+      profitText: `$${profit.toLocaleString("en-US")}`,
+      totalText: `$${Math.round(total).toLocaleString("en-US")}`,
+    };
   }, [budget, percent, cycles, days]);
 
   const budgetPct  = ((budget  - 100)  / (10000 - 100))  * 100;
@@ -126,12 +169,12 @@ export default function SectionCalc() {
           <div className="calc-result">
             <div className="calc-result__row">
               <span className="calc-result__label">Потенційний прибуток:</span>
-              <span className="calc-result__amount">${profit.toLocaleString("en")}</span>
+              <span className="calc-result__amount">{profitText}</span>
             </div>
             <div className="calc-result__divider" />
             <div className="calc-result__row calc-result__row--secondary">
               <span className="calc-result__label">Загальна сума:</span>
-              <span className="calc-result__total">${total.toLocaleString("en")}</span>
+              <span className="calc-result__total">{totalText}</span>
             </div>
             <p className="calc-result__note">
               ⓘ Складний відсоток — прибуток кожного круга додається до бюджету і далі теж працює.
