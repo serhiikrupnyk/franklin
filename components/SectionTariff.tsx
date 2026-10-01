@@ -27,7 +27,7 @@ const PLANS: TariffPlan[] = [
     result:
       'Розуміння усіх базових аспектів у P2P, старт заробітку з доходом від 500$ на місяць. Можливість відбити вартість курсу вже під час навчання.',
     oldPrice: '490$',
-    price: '290$',
+    price: '295$',
     ctaHref: 'https://secure.wayforpay.com/button/b0f657e92040d',
     ctaLabel: 'ОБРАТИ ТАРИФ',
   },
@@ -57,7 +57,7 @@ const PLANS: TariffPlan[] = [
     result:
       "Глибоке розуміння ринку, дохід від 1000$+ на місяць, реальна можливість потрапити до команди REMARENKO P2P. Можливо окупити вартість навчання ще під час проходження курсу.",
     oldPrice: '700$',
-    price: '450$',
+    price: '455$',
     ctaHref: 'https://secure.wayforpay.com/button/b6575f6df9966',
     ctaLabel: 'ОБРАТИ ТАРИФ',
   },
@@ -80,7 +80,7 @@ const PLANS: TariffPlan[] = [
     result:
       'Розуміння, як масштабуватись до стабільного доходу 1500–2000$+ щомісяця. Можливість увійти до команди REMARENKO P2P або побудувати власну.',
     oldPrice: '1200$',
-    price: '790$',
+    price: '745$',
     ctaHref: 'https://secure.wayforpay.com/button/bd2998359eb9d',
     ctaLabel: 'ОБРАТИ ТАРИФ',
   },
