@@ -73,6 +73,69 @@
     z-index: 2;
   }
 
+  /* About cards: keep every icon fully inside its own card. */
+  .about-v2 .about-content-down {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .about-v2 .advantage--sm,
+  .about-v2 .advantage--md,
+  .about-v2 .advantage--lg {
+    box-sizing: border-box;
+    grid-column: 1;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 18px 22px;
+    border-radius: 20px;
+  }
+
+  .about-v2 .advantage--sm {
+    min-height: 174px;
+  }
+
+  .about-v2 .advantage-icon-wrapper {
+    position: relative;
+    flex: 0 0 58px;
+    box-sizing: border-box;
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 2px;
+    padding: 0;
+    transform: none;
+  }
+
+  .about-v2 .advantage-icon {
+    display: block;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+  }
+
+  .about-v2 .advantage--sm .about-v2__card-body {
+    display: block;
+    flex: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  .about-v2 .about-v2__card-text {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  .scroll-reveal-enabled .about-v2 .about-task-wrapper.scroll-reveal.reveal-up {
+    transform: none;
+  }
+
   /* Card ornaments remain visible, while copy and icons are always above them. */
   .who-v2 .who-center-point,
   .tariff-v3__card,
