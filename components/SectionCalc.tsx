@@ -31,6 +31,12 @@ function formatScientificMoney(log10Value: number) {
   return `$${mantissa.toLocaleString("en-US", { maximumFractionDigits: 2 })} × 10${superscriptExponent}`;
 }
 
+function formatInteger(value: number, thousandsSeparator = ".") {
+  return Math.round(value)
+    .toLocaleString("en-US")
+    .replace(/,/g, thousandsSeparator);
+}
+
 export default function SectionCalc() {
   const [budget, setBudget] = useState(1000);
   const [percent, setPercent] = useState(0.7);
@@ -52,8 +58,8 @@ export default function SectionCalc() {
     const total = budget * Math.pow(1 + p, totalCycles);
     const profit = Math.round(total - budget);
     return {
-      profitText: `$${profit.toLocaleString("en-US")}`,
-      totalText: `$${Math.round(total).toLocaleString("en-US")}`,
+      profitText: `$${formatInteger(profit)}`,
+      totalText: `$${formatInteger(total, " ")}`,
     };
   }, [budget, percent, cycles, days]);
 
@@ -101,7 +107,7 @@ export default function SectionCalc() {
                 />
                 <div className="calc-row__limits"><span>$100</span><span>$10 000</span></div>
               </div>
-              <div className="calc-row__value">${budget.toLocaleString("en")}</div>
+              <div className="calc-row__value">${formatInteger(budget)}</div>
             </div>
 
             <div className="calc-row">
