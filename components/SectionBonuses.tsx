@@ -1,21 +1,24 @@
 const BONUS_CARDS = [
   {
-    image: '/images/IMG_7421.PNG',
+    image: '/images/photo_2026-10-01_22-43-13.jpg',
     title: "КОМ'ЮНІТІ",
     text: 'доступ до ком\'юніті на 6 місяців',
     alt: "Ком'юніті",
+    imageClass: 'bonuses-card__image--community',
   },
   {
-    image: '/images/IMG_7423.PNG',
+    image: '/images/photo_2026-10-01_22-47-22.jpg',
     title: 'РЕСУРСИ',
     text: 'пакет корисних ресурсів (таблиці для розрахунку, текста, додаткові матеріали)',
     alt: 'Ресурси',
+    imageClass: 'bonuses-card__image--resources',
   },
   {
-    image: '/images/IMG_7422.PNG',
+    image: '/images/photo_2026-10-01_22-42-38.jpg',
     title: 'КОМАНДА',
     text: 'можливість потрапити до нас в команду',
     alt: 'Команда',
+    imageClass: 'bonuses-card__image--team',
   },
 ] as const;
 
@@ -39,7 +42,15 @@ export default function SectionBonuses() {
           {BONUS_CARDS.map((card) => (
             <article key={card.title} className="bonuses-card">
               <div className="bonuses-card__media">
-                <img src={card.image} loading="lazy" alt={card.alt} className="bonuses-card__image" />
+                <img
+                  src={card.image}
+                  loading="lazy"
+                  decoding="async"
+                  width={1280}
+                  height={720}
+                  alt={card.alt}
+                  className={`bonuses-card__image ${card.imageClass}`}
+                />
                 <div className="bonuses-card__check" aria-hidden="true">
                   <CheckMark />
                 </div>

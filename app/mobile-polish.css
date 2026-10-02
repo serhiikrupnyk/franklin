@@ -132,6 +132,10 @@
     overflow-wrap: anywhere;
   }
 
+  .bonuses-card__media .bonuses-card__image {
+    border-radius: inherit;
+  }
+
   .scroll-reveal-enabled .about-v2 .about-task-wrapper.scroll-reveal.reveal-up {
     transform: none;
   }
