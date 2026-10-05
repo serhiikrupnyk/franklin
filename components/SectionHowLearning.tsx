@@ -45,8 +45,8 @@ export default function SectionHowLearning() {
               </div>
               <h3 className="how-learning__card-title">ГРУПОВІ ЗІДЗВОНИ</h3>
               <p className="how-learning__card-text">
-                <span className="how-learning__card-accent">6 зідзвонів з менторами та експертом:</span>{" "}
-                навчання на актуальні теми сфери
+                <span className="how-learning__card-accent">До 7 зідзвонів з менторами та експертом</span>{" "}
+                залежно від обраного тарифу.
               </p>
             </div>
 

@@ -162,7 +162,7 @@ export default function OfferPage() {
                 <div className="offer-contacts__card-title">Реквізити рахунку</div>
                 <div className="offer-contacts__row">
                   <span className="offer-contacts__label">IBAN:</span>
-                  <span className="offer-contacts__mono">UA05325365000002600501207278 5</span>
+                  <span className="offer-contacts__mono">UA053253650000026005012072785</span>
                 </div>
                 <div className="offer-contacts__row">
                   <span className="offer-contacts__label">Банк:</span>

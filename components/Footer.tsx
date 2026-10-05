@@ -6,7 +6,7 @@ export default function Footer() {
           <div className="site-footer__entity">ФОП Ремаренко Михайло Петрович</div>
           <div className="site-footer__meta">
             <span className="site-footer__meta-label">IBAN:</span>
-            <span className="site-footer__meta-value">UA05325365000002600501207278 5</span>
+            <span className="site-footer__meta-value">UA053253650000026005012072785</span>
           </div>
           <div className="site-footer__meta">
             <span className="site-footer__meta-label">ЄДРПОУ:</span>
