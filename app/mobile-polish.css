@@ -136,6 +136,24 @@
     border-radius: inherit;
   }
 
+  .program-v2__title-row {
+    align-items: center;
+    gap: 14px;
+  }
+
+  .program-v2__modules {
+    row-gap: 18px;
+  }
+
+  .program-v2__card {
+    border-color: rgba(var(--gold-rgb), 0.44);
+  }
+
+  .program-v2__art {
+    width: clamp(68px, 19cqw, 82px);
+    height: clamp(68px, 19cqw, 82px);
+  }
+
   .scroll-reveal-enabled .about-v2 .about-task-wrapper.scroll-reveal.reveal-up {
     transform: none;
   }

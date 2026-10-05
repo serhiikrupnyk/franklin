@@ -11,6 +11,7 @@ const PROGRAM_ICONS = [
 type ProgramModule = {
   label: string;
   title: string;
+  art?: string;
   items: string[];
   additional?: string[];
   result: string;
@@ -20,6 +21,7 @@ const MODULES_BEFORE_PRO: ProgramModule[] = [
   {
     label: "Модуль 0",
     title: "Введення в курс",
+    art: "/images/program-module-00.webp",
     items: [
       "Привітання та знайомство з REMARENKO P2P",
       "Як проходить навчання: формат, структура, правила",
@@ -33,6 +35,7 @@ const MODULES_BEFORE_PRO: ProgramModule[] = [
   {
     label: "Модуль 01",
     title: "Перші кроки на Binance",
+    art: "/images/program-module-01.webp",
     items: [
       "Створення і прогрів акаунту",
       "Платіжні методи та виставлення оголошень",
@@ -45,6 +48,7 @@ const MODULES_BEFORE_PRO: ProgramModule[] = [
   {
     label: "Модуль 02",
     title: "Біржі, мережі",
+    art: "/images/program-module-02.webp",
     items: [
       "Які мережі використовуються у P2P",
       "Вартість і швидкість переказів",
@@ -57,6 +61,7 @@ const MODULES_BEFORE_PRO: ProgramModule[] = [
   {
     label: "Модуль 03",
     title: "Безпека та апеляції",
+    art: "/images/program-module-03.webp",
     items: [
       "Що таке апеляція і як її відкривати",
       "Як діяти, якщо тебе намагаються обманути",
@@ -69,6 +74,7 @@ const MODULES_BEFORE_PRO: ProgramModule[] = [
   {
     label: "Модуль 04",
     title: "Дропи і оренда карток",
+    art: "/images/program-module-04.webp",
     items: [
       "Де і як шукати дропів",
       "Як домовлятись і не зливати час",
@@ -81,6 +87,7 @@ const MODULES_BEFORE_PRO: ProgramModule[] = [
   {
     label: "Модуль 05",
     title: "Актуальні зв'язки",
+    art: "/images/program-module-05.webp",
     items: [
       "OKX зв'язка — з прибутком до 2%",
       "Bybit — депозит + прокрут, прибуток до 2%",
@@ -95,6 +102,7 @@ const MODULES_PRO: ProgramModule[] = [
   {
     label: "Модуль 06",
     title: "Безліміт та обнал зв'язки",
+    art: "/images/program-module-06.webp",
     items: [
       "USDT–USDC зв'язка — до 2% прибутку",
       "Як виводити кошти через банки/обмінники - ОБНАЛ",
@@ -107,6 +115,7 @@ const MODULES_PRO: ProgramModule[] = [
   {
     label: "Модуль 07",
     title: "P2P через ФОП",
+    art: "/images/program-module-07.webp",
     items: [
       "Як оформити ФОП",
       "Які банки найкращі",
@@ -119,6 +128,7 @@ const MODULES_PRO: ProgramModule[] = [
   {
     label: "Модуль 08",
     title: "Створення мерчанта",
+    art: "/images/program-module-08.webp",
     items: [
       "Хто такий мерчант і чому це топ-рівень у P2P",
       "Як підготуватись до подачі заявки",
@@ -199,12 +209,24 @@ function ProgramModuleCard({
         <div className="program-v2__body">
           <div className="program-v2__content">
             <div className="modul_icon_name program-v2__title-row">
-              <img
-                src={PROGRAM_ICONS[iconIndex % PROGRAM_ICONS.length]}
-                loading="lazy"
-                alt=""
-                className="program_icon program-v2__icon"
-              />
+              {module.art ? (
+                <img
+                  src={module.art}
+                  loading="lazy"
+                  decoding="async"
+                  width={640}
+                  height={640}
+                  alt=""
+                  className="program-v2__art"
+                />
+              ) : (
+                <img
+                  src={PROGRAM_ICONS[iconIndex % PROGRAM_ICONS.length]}
+                  loading="lazy"
+                  alt=""
+                  className="program_icon program-v2__icon"
+                />
+              )}
               <div className="unbounded_40 mobile-18 program-v2__module-title">
                 {module.title}
               </div>

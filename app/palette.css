@@ -389,6 +389,19 @@ body {
 .program-v2__item-text,
 .program-v2__extra-label,
 .program-v2__extra-list li { color: var(--ivory); }
+.program-v2__title-row {
+  align-items: center;
+  gap: clamp(16px, 1.5cqw, 28px);
+}
+.program-v2__module-title { min-width: 0; }
+.program-v2__art {
+  display: block;
+  width: clamp(76px, 5.2cqw, 104px);
+  height: clamp(76px, 5.2cqw, 104px);
+  flex: 0 0 auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 18px rgba(var(--gold-rgb), 0.22));
+}
 .program-v2__item-text,
 .program-v2__extra-list li { color: rgba(var(--ivory-rgb), 0.76); }
 .program-v2__label { color: var(--muted); opacity: 0.72; }
