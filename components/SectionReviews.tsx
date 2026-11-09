@@ -7,6 +7,13 @@ type Review =
 
 const REVIEWS: Review[] = [
   {
+    key: 'local-video-7262',
+    type: 'video',
+    src: '/images/IMG_7262.mp4',
+    poster: '/images/IMG_7262-poster.webp',
+    name: 'Відеовідгук учня',
+  },
+  {
     key: 'local-video-6555',
     type: 'video',
     src: '/images/IMG_6555.mp4',
