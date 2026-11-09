@@ -11,7 +11,7 @@ export default function SectionVideo() {
             <br />
             про P2P-торгівлю
           </h2>
-          <div style={{paddingTop: '56.17021276595745%'}} className="video w-video w-embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/ESJzaP87h3E?si=AwM7Gx_bVHKXxPUp" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen="" data-ruffle-polyfilled=""></iframe></div>
+          <div style={{paddingTop: '56.17021276595745%'}} className="video w-video w-embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/C77WK8BtTBw?si=MmuZhSIJkFKiCTa_" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen="" data-ruffle-polyfilled=""></iframe></div>
         </div>
       </div>
     </section>
